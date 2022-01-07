@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include "pharm_attributes.h"
 
 using namespace std;
 
