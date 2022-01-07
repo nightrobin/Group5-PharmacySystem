@@ -19,7 +19,7 @@ class pharm_methods
         void daily_summary(); // list of summary sales
         void total_purchase();
         void e_prescription();
-        void exit(int code);
+        void exit();
 
     protected:
 
