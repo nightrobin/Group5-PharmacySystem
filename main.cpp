@@ -53,6 +53,8 @@ int main()
             case 6: {
                     break; }
             case 0: {
+                    pharmX.exit();
+
                     break; }
 
 

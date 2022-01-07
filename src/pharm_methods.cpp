@@ -10,3 +10,10 @@ pharm_methods::~pharm_methods()
 {
     //dtor
 }
+void pharm_methods::exit(){
+
+
+    system("CLS");
+    cout << "\t\tExited" << endl;
+
+}
