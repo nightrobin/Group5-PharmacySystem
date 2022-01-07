@@ -2,6 +2,8 @@
 #define PHARM_METHODS_H
 #include <iostream>
 
+#include "pharm_attributes.h"
+
 using namespace std;
 
 class pharm_methods

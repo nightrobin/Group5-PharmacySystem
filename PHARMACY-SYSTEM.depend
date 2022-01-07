@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1641557941 source:c:\users\mary ann\documents\github\group5-pharmacysystem\main.cpp
+	<iostream>
+	<ctime>
+	"pharm_attributes.h"
+	"pharm_methods.h"
+
+1641557941 c:\users\mary ann\documents\github\group5-pharmacysystem\include\pharm_attributes.h
+	<iostream>
+
+1641558162 c:\users\mary ann\documents\github\group5-pharmacysystem\include\pharm_methods.h
+	<iostream>
+	"pharm_attributes.h"
+
+1641487352 source:c:\users\mary ann\documents\github\group5-pharmacysystem\src\pharm_attributes.cpp
+	"pharm_attributes.h"
+
+1641557938 source:c:\users\mary ann\documents\github\group5-pharmacysystem\src\pharm_methods.cpp
+	"pharm_methods.h"
+
