@@ -24,7 +24,7 @@ int main()
     cout << "\t\t-----------------------------------------" << endl;
     cout << "\t\t|[1] - TAKE ORDER \t\t\t|" << endl;
     cout << "\t\t|[2] - DELETE ORDER \t\t\t|" << endl;
-    cout << "\t\t|[3] - MODIFY ORDER t\t\t\t|" << endl;
+    cout << "\t\t|[3] - MODIFY ORDER \t\t\t|" << endl;
     cout << "\t\t|[4] - ORDER LIST \t\t\t|" << endl;
     cout << "\t\t|[5] - DAILY SUMMARY\t\t\t|" << endl;
     cout << "\t\t|[6] - TOTAL PURCHASE \t\t\t|" << endl;

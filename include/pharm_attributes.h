@@ -11,7 +11,7 @@ class pharm_attributes
         virtual ~pharm_attributes();
 
         int receipt_number;
-        int numberofMedicine;
+        int numberofMedicine[28];
         int medicineName;
         string date;
         string genName;         // generic name
