@@ -12,6 +12,8 @@ pharm_methods::~pharm_methods()
 }
 void pharm_methods::take_order(){
 
+    int ctr;
+
 system("CLS");
 
     cout << "\t\t\t\t---------- LIST OF MEDICINES ----------" << endl <<endl;
@@ -104,7 +106,12 @@ system("CLS");
     cout << "--------------------------------------------------------------------------------------------------------------" << endl;
 
     }
+
+
+
+
 }
+
 
 
 void pharm_methods::delete_order(){

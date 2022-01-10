@@ -12,6 +12,8 @@ class pharm_methods
         pharm_methods();
         virtual ~pharm_methods();
 
+
+
         void take_order(); // to take orders
         void delete_order(); // to delete
         void modify (); // to modify
