@@ -12,10 +12,9 @@ int main()
     time_t timetoday;
     time (&timetoday);
 
-    int choice = -1;
+    int choice;
 
-    while (choice != 0) {
-
+    do {
     system("CLS");
     cout << "\t\tWelcome to PLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
     cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
@@ -29,7 +28,7 @@ int main()
     cout << "\t\t|[5] - DAILY SUMMARY\t\t\t|" << endl;
     cout << "\t\t|[6] - TOTAL PURCHASE \t\t\t|" << endl;
     cout << "\t\t|[7] - E-PRESCRIPTION \t\t\t|" << endl;
-    cout << "\t\t|[0] - EXIT \t\t\t\t|" << endl;
+    cout << "\t\t|[8] - EXIT \t\t\t\t|" << endl;
     cout << "\t\t-----------------------------------------" << endl;
 
     cout << "\n\t\tEnter your choice here: ";
@@ -43,6 +42,7 @@ int main()
 
             case 1: {
                     pharmX.take_order();
+                    system("PAUSE");
                     break; }
             case 2: {
                     pharmX.delete_order();
@@ -63,15 +63,21 @@ int main()
                     pharmX.e_prescription();
 
                     break;}
-            case 0: {
+            case 8: {
                     pharmX.exit();
+                    system("PAUSE");
                     break; }
+            default: {
+                    cout << "Invalid input" << endl;
+
+            }
+
+        } //end switch
+} while (choice != 8);
 
 
-        }
 
 
    return 0;
 
    }
-}
