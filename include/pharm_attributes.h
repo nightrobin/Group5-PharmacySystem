@@ -14,6 +14,7 @@ class pharm_attributes
     string genericName;
     string nameOfmed;
     double priceOfmed;
+    bool isPurchase;
 
     //discounts and tax
     double discountID = 0.05;
@@ -24,6 +25,7 @@ class pharm_attributes
     int contactOfcostumer;
     int ageOfcostumer;
     string addressOfcostumer;
+
 
 
     protected:

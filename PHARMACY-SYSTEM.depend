@@ -18,3 +18,22 @@
 1641557938 source:c:\users\mary ann\documents\github\group5-pharmacysystem\src\pharm_methods.cpp
 	"pharm_methods.h"
 
+1641906949 source:c:\users\ramru\onedrive\documents\projectx\pharmacy-system.cbp\main.cpp
+	<iostream>
+	<ctime>
+	"pharm_attributes.h"
+	"pharm_methods.h"
+
+1641916948 c:\users\ramru\onedrive\documents\projectx\pharmacy-system.cbp\include\pharm_attributes.h
+	<iostream>
+
+1641914448 c:\users\ramru\onedrive\documents\projectx\pharmacy-system.cbp\include\pharm_methods.h
+	<iostream>
+	"pharm_attributes.h"
+
+1641906949 source:c:\users\ramru\onedrive\documents\projectx\pharmacy-system.cbp\src\pharm_attributes.cpp
+	"pharm_attributes.h"
+
+1641917490 source:c:\users\ramru\onedrive\documents\projectx\pharmacy-system.cbp\src\pharm_methods.cpp
+	"pharm_methods.h"
+

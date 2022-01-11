@@ -105,6 +105,9 @@ void pharm_methods::addMed(){
         string genericName;
         string nameOfmed;
         double priceOfmed;
+        bool isPurchace;
+
+
 
         cout << "\nPlease input the following details" << endl;
 
@@ -164,9 +167,20 @@ void pharm_methods::list_of_orders(int orderID){
 
 }
 void pharm_methods::quantity_of_purch_med(int orderID){
+    cout << "Quantity of purchased medicine" << endl;
 
-
+    int sum(int med[], int medMax);
+    {
+        int sum = 0;
+        for(int i = 0; i < medMax; i++)
+        if (med[i].isPurchase)
+        {
+            cout << "Order ID " << i + 1 << ": " << med[i].nameOfmed << endl;
+        }
+    }
 }
+
+
 void pharm_methods::total_purchase(int orderID){
 
 }
