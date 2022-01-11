@@ -103,7 +103,7 @@ void pharm_methods::addMed(){
 
     listofDrugs();
 
-        for (int i = 1; i < medMax; i++){
+        for (int i = 0; i < medMax; i++){
 
         string genericName;
         string nameOfmed;
@@ -111,7 +111,7 @@ void pharm_methods::addMed(){
 
         cout << "\nPlease input the following details" << endl;
 
-        cout << "\nDrug key no. " << i << endl;
+        cout << "\nDrug key no. " << i  + 1<< endl;
         cout << "Please enter the name of Medicine/Drug: ";
         getline(cin, nameOfmed);
 
