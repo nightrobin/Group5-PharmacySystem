@@ -109,56 +109,32 @@ void pharm_methods::addMed(){
         string nameOfmed;
         double priceOfmed;
 
-
-
-
         cout << "\nPlease input the following details" << endl;
-
-
 
         cout << "\nDrug key no. " << i << endl;
         cout << "Please enter the name of Medicine/Drug: ";
         getline(cin, nameOfmed);
 
-
-
         cout << "Please enter the generic name of Medicine/Drug: ";
         getline(cin, genericName);
-
-
 
         cout << "Enter price of Medicine/Drug: ";
         cin >> priceOfmed;
 
-
-
         cout << endl << "-------------------------------------------------" << endl;
-
-
 
         nameOfmed = med[i].nameOfmed;
         genericName = med[i].genericName;
         priceOfmed = med[i].priceOfmed;
 
-
-
-
         cin.clear();
         fflush(stdin);
 
-
-
-}
-
-
-
-
+        }
 }
 
 
 void pharm_methods::take_order(int orderID){
-
-
 
 
 }
@@ -168,9 +144,6 @@ void pharm_methods::modify(int orderID){
 
     orderID--;
 
-
-
-
         if (orderID <= 0){
         orderID = 0;
         }
@@ -178,35 +151,17 @@ void pharm_methods::modify(int orderID){
         orderID = medMax - 1;
         }
 
-
-
-
-
         cout << "\nName of Medicine/Drugs (" << med[orderID].nameOfmed << "): ";
         getline(cin, med[orderID].nameOfmed);
-
-
-
-
 
         cout << "\nGeneric Name of Medicine/Drug (" << med[orderID].genericName << "): ";
         getline(cin, med[orderID].genericName);
 
-
-
-
-
         cout << "\nPrice of Medicine (" << med[orderID].priceOfmed << "): ";
         cin >> med[orderID].priceOfmed;
 
-
-
         cin.clear();
         fflush(stdin);
-
-
-
-
 
         cout << endl;
 }
