@@ -13,7 +13,7 @@ int main()
     time (&timetoday);
 
     int choice = -1;
-    int drugId;
+    int orderID;
 
     while (choice !=0){
     system("CLS");
@@ -49,21 +49,42 @@ int main()
                     break;
             case 2:
 
+                    pharmX.take_order(orderID);
+                    system ("pause");
                     break;
             case 3:
 
                     cout << "\nPlease enter Medical/Drug ID you want to modify: ";
-                    cin >> drugId;
+                    cin >> orderID;
+
                     cin.clear();
                     fflush(stdin);
                     break;
             case 4:
 
+                    pharmX.list_of_orders(orderID);
+                    system("pause");
+
                     break;
             case 5:
+                    pharmX.quantity_of_purch_med(orderID);
+                    system("pause");
 
                     break;
             case 6:
+
+                    pharmX.total_purchase(orderID);
+                    system("pause");
+
+                    break;
+
+            case 7:
+                    pharmX.e_prescription();
+                    system("pause");
+
+                    break;
+            case 8:
+
                     break;
 
             default:

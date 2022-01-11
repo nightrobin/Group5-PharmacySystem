@@ -92,9 +92,6 @@ void pharm_methods::listofDrugs(){
     cout << "--------------------------------------------------------------------------------------------------------------" << endl;
     }
 
-
-
-
 }
 
 void pharm_methods::addMed(){
@@ -132,14 +129,10 @@ void pharm_methods::addMed(){
 
         }
 }
-
-
 void pharm_methods::take_order(int orderID){
 
 
 }
-
-
 void pharm_methods::modify(int orderID){
 
     orderID--;
@@ -165,6 +158,21 @@ void pharm_methods::modify(int orderID){
 
         cout << endl;
 }
+void pharm_methods::list_of_orders(int orderID){
 
 
 
+}
+void pharm_methods::quantity_of_purch_med(int orderID){
+
+
+}
+void pharm_methods::total_purchase(int orderID){
+
+}
+
+void pharm_methods::e_prescription(){
+
+
+
+}
