@@ -12,16 +12,17 @@ class pharm_methods
         pharm_methods();
         virtual ~pharm_methods();
 
+        static const int medMax = 10;
+        pharm_attributes med[medMax];
 
+        void listofDrugs();
+        void addMed();
+        void take_order(int orderID);
+        void modify(int orderID);
+        void list_of_orders(int orderID);
+        void quantity_of_purch_med(int orderID);
+        void total_purchase(int orderID);
 
-        void take_order(); // to take orders
-        void delete_order(); // to delete
-        void modify (); // to modify
-        void order_list(); // list order
-        void daily_summary(); // list of summary sales
-        void total_purchase();
-        void e_prescription();
-        void exit();
 
     protected:
 

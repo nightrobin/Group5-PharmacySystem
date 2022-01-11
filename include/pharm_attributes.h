@@ -7,20 +7,24 @@ using namespace std;
 class pharm_attributes
 {
     public:
-        pharm_attributes();
+         pharm_attributes();
         virtual ~pharm_attributes();
 
-        double amount[28];
-        double price[28];
-        string date;
-        string genName;         // generic name
-        string numberofMedicine[28];
-        int receipt_number;
-        int orderNumber;        // order number | use:
-        int medicineNum;        // Medicine Number | use:
-        int dosage;             // dosage | use:
-        int quantity;           // quantity | max of 10 orders  | use:
-        bool isActive;
+
+    string genericName;
+    string nameOfmed;
+    double priceOfmed;
+
+    //discounts and tax
+    double discountID = 0.05;
+    double VAT = 0.12;
+
+    //for infos of costumer:
+    string nameOfcostumer;
+    int contactOfcostumer;
+    int ageOfcostumer;
+    string addressOfcostumer;
+
 
     protected:
 
