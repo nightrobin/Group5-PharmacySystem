@@ -67,7 +67,7 @@ int main()
                     break;
 
             default:
-                    cout << "Invalid input" << endl;
+                    cout << "Invalid inputff" << endl;
 
 
 
