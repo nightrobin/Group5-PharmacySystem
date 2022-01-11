@@ -12,22 +12,24 @@ int main()
     time_t timetoday;
     time (&timetoday);
 
-    int choice;
+    int choice = -1;
+    int drugId;
 
-    do {
+    while (choice !=0){
     system("CLS");
     cout << "\t\tWelcome to PLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
     cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
     cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
 
     cout << "\t\t-----------------------------------------" << endl;
-    cout << "\t\t|[1] - TAKE ORDER \t\t\t|" << endl;
-    cout << "\t\t|[2] - MODIFY ORDER \t\t\t|" << endl;
-    cout << "\t\t|[3] - ORDER LIST \t\t\t|" << endl;
-    cout << "\t\t|[4] - DAILY SUMMARY\t\t\t|" << endl;
-    cout << "\t\t|[5] - TOTAL PURCHASE \t\t\t|" << endl;
-    cout << "\t\t|[5] - E-PRESCRIPTION \t\t\t|" << endl;
-    cout << "\t\t|[6] - EXIT \t\t\t\t|" << endl;
+    cout << "\t\t|[1] - ADD MEDICINE \t\t\t|" << endl;
+    cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
+    cout << "\t\t|[3] - MODIFY ORDER \t\t\t|" << endl;
+    cout << "\t\t|[4] - LIST OF ORDERS \t\t\t|" << endl;
+    cout << "\t\t|[5] - QUANTITY OF PURCHASE MEDICINE\t|" << endl;
+    cout << "\t\t|[6] - TOTAL PURCHASE \t\t\t|" << endl;
+    cout << "\t\t|[7] - E-PRESCRIPTION \t\t\t|" << endl;
+    cout << "\t\t|[8] - EXIT \t\t\t\t|" << endl;
     cout << "\t\t-----------------------------------------" << endl;
 
     cout << "\n\t\tEnter your choice here: ";
@@ -42,6 +44,7 @@ int main()
             case 1:
 
                     pharmX.addMed();
+                    system ("pause");
 
                     break;
             case 2:
@@ -49,6 +52,10 @@ int main()
                     break;
             case 3:
 
+                    cout << "\nPlease enter Medical/Drug ID you want to modify: ";
+                    cin >> drugId;
+                    cin.clear();
+                    fflush(stdin);
                     break;
             case 4:
 
@@ -65,7 +72,7 @@ int main()
 
 
         } //end switch
-} while (choice != 6);
+    }
 
 
 

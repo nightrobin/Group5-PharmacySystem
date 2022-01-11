@@ -15,7 +15,14 @@ void pharm_methods::listofDrugs(){
 
      system("CLS");
 
-    { //COUGHS AND COLDS
+    cout << "\t\t\t\t---------- LIST OF MEDICINES ----------" << endl <<endl;
+
+    cout << "**************************************************************************************************************" << endl;
+    cout << "PRODUCT NO.\t\t\tPRODUCT NAME|mg/ml\t\t\tGENERIC NAME\t\t\tPRICE" << endl;
+    cout << "**************************************************************************************************************" << endl;
+
+
+    {//COUGHS AND COLDS
     cout << "\t\t\t\tFOR COUGH AND COLDS" << endl;
     cout << "--------------------------------------------------------------------------------------------------------------" << endl;
 
@@ -92,50 +99,52 @@ void pharm_methods::listofDrugs(){
 
 void pharm_methods::addMed(){
 
-for (int i = 1; i < medMax; i++){
+    system("CLS");
 
+    listofDrugs();
 
+        for (int i = 1; i < medMax; i++){
 
-string genericName;
-string nameOfmed;
-double priceOfmed;
-
-
-
-
-cout << "\nPlease input the following details" << endl;
-
-
-
-cout << "\nDrug key no. " << i << endl;
-cout << "Please enter the name of Medicine/Drug: ";
-getline(cin, nameOfmed);
-
-
-
-cout << "Please enter the generic name of Medicine/Drug: ";
-getline(cin, genericName);
-
-
-
-cout << "Enter price of Medicine/Drug: ";
-cin >> priceOfmed;
-
-
-
-cout << "-------------------------------------------------" << endl;
-
-
-
-nameOfmed = med[i].nameOfmed;
-genericName = med[i].genericName;
-priceOfmed = med[i].priceOfmed;
+        string genericName;
+        string nameOfmed;
+        double priceOfmed;
 
 
 
 
-cin.clear();
-fflush(stdin);
+        cout << "\nPlease input the following details" << endl;
+
+
+
+        cout << "\nDrug key no. " << i << endl;
+        cout << "Please enter the name of Medicine/Drug: ";
+        getline(cin, nameOfmed);
+
+
+
+        cout << "Please enter the generic name of Medicine/Drug: ";
+        getline(cin, genericName);
+
+
+
+        cout << "Enter price of Medicine/Drug: ";
+        cin >> priceOfmed;
+
+
+
+        cout << endl << "-------------------------------------------------" << endl;
+
+
+
+        nameOfmed = med[i].nameOfmed;
+        genericName = med[i].genericName;
+        priceOfmed = med[i].priceOfmed;
+
+
+
+
+        cin.clear();
+        fflush(stdin);
 
 
 
@@ -157,7 +166,8 @@ void pharm_methods::take_order(int orderID){
 
 void pharm_methods::modify(int orderID){
 
-        orderID--;
+    orderID--;
+
 
 
 
@@ -170,18 +180,24 @@ void pharm_methods::modify(int orderID){
 
 
 
-      /*  cout << "\nTitle (" << books[bookID].title << "): ";
-        getline(cin, books[bookID].title);
+
+
+        cout << "\nName of Medicine/Drugs (" << med[orderID].nameOfmed << "): ";
+        getline(cin, med[orderID].nameOfmed);
 
 
 
-        cout << "\nAuthor (" << books[bookID].author << "): ";
-        getline(cin, books[bookID].author);
+
+
+        cout << "\nGeneric Name of Medicine/Drug (" << med[orderID].genericName << "): ";
+        getline(cin, med[orderID].genericName);
 
 
 
-        cout << "\nPrice (" << books[bookID].price << "): ";
-        cin >> books[bookID].price;
+
+
+        cout << "\nPrice of Medicine (" << med[orderID].priceOfmed << "): ";
+        cin >> med[orderID].priceOfmed;
 
 
 
@@ -190,7 +206,9 @@ void pharm_methods::modify(int orderID){
 
 
 
-        cout << endl; */
+
+
+        cout << endl;
 }
 
 
