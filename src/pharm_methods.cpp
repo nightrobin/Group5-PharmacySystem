@@ -137,6 +137,8 @@ void pharm_methods::addMed(){
 }
 void pharm_methods::take_order(int orderID){
 
+    cout << "hello world" << endl;
+
 
 }
 void pharm_methods::modify(int orderID){

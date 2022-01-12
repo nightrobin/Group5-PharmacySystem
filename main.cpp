@@ -47,6 +47,7 @@ int main()
 
             case 2: {
                    pharmX.take_order(orderID);
+                   system("PAUSE");
 
                     break; }
 
@@ -69,7 +70,8 @@ int main()
                     pharmX.total_purchase(orderID);
                     //nameofmed
                     //price * quantity
-
+                    system("CLS");
+                    system("PAUSE");
                     break; }
 
             case 6: {
@@ -79,8 +81,6 @@ int main()
             case 0: {
                     pharmX.exit();
                     }
-
-
 
         } //end switch
     }
