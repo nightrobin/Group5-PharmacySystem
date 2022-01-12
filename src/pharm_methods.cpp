@@ -1,4 +1,6 @@
 #include "pharm_methods.h"
+#include <ctime>
+
 
 
 pharm_methods::pharm_methods()
@@ -13,7 +15,74 @@ pharm_methods::~pharm_methods()
 
 void pharm_methods::menu(){
 
+    time_t timetoday;
+    time (&timetoday);
 
+    int choice = -1;
+    int orderID;
+
+    while (choice !=0){
+    system("CLS");
+    cout << "\t\tWelcome to PLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
+    cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
+    cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
+
+    cout << "\t\t-----------------------------------------" << endl;
+    cout << "\t\t|[1] - ADD 10 MEDICINE \t\t\t|" << endl;
+    cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
+    cout << "\t\t|[3] - MODIFY ORDER \t\t\t|" << endl;
+    cout << "\t\t|[4] - LIST OF ORDERS \t\t\t|" << endl;
+    cout << "\t\t|[5] - TOTAL PURCHASE \t\t\t|" << endl;
+    cout << "\t\t|[6] - E-PRESCRIPTION \t\t\t|" << endl;
+    cout << "\t\t|[0] - EXIT \t\t\t\t|" << endl;
+    cout << "\t\t-----------------------------------------" << endl;
+
+    cout << "\n\t\tEnter your choice here: ";
+    cin >> choice;
+
+
+        cin.clear();
+        fflush(stdin);
+
+        switch (choice){
+
+            case 1: {
+                    addMed();
+                    break; }
+
+            case 2: {
+                   take_order(orderID);
+                    break; }
+
+            case 3: {
+                    system("CLS");
+                    cout << "\nPlease enter Medical/Drug ID you want to modify: ";
+                    cin >> orderID;
+                    cin.clear();
+                    fflush(stdin);
+                    modify(orderID);
+                    break; }
+
+            case 4: {
+                    list_of_orders(orderID);
+                    break; }
+
+            case 5: {
+                    total_purchase(orderID);
+                    break; }
+
+            case 6: {
+                    e_prescription();
+                    break; }
+
+            case 0: {
+                    exit();
+                    }
+
+
+
+        } //end switch
+    }
 
 }
 
@@ -113,8 +182,6 @@ void pharm_methods::addMed(){
         double priceOfmed;
         bool isPurchace;
 
-
-
         cout << "\nPlease input the following details" << endl;
 
         cout << "\nDrug key no. " << i  + 1<< endl;
@@ -159,8 +226,10 @@ void pharm_methods::modify(int orderID){
         cout << "\nGeneric Name of Medicine/Drug (" << med[orderID].genericName << "): ";
         getline(cin, med[orderID].genericName);
 
+
         cout << "\nPrice of Medicine (" << med[orderID].priceOfmed << "): ";
         cin >> med[orderID].priceOfmed;
+
 
         cin.clear();
         fflush(stdin);
@@ -256,6 +325,13 @@ void pharm_methods::e_prescription(){
 
             } //end swtich
 
+}
+
+void pharm_methods::exit(){
+
+
+    system("CLS");
+    cout << "\t\t\tTHANKS FOR USING OUR SYSTEM!" << endl;
 
 }
 

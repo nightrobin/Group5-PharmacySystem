@@ -24,6 +24,7 @@ class pharm_methods
         void quantity_of_purch_med(int orderID);
         void total_purchase(int orderID);
         void e_prescription();
+        void exit();
 
 
 
