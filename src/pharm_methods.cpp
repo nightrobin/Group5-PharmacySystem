@@ -238,6 +238,7 @@ void pharm_methods::e_prescription(){
     int choice;
     system ("CLS");
 
+    do{
     cout << "\t\t\tCOVID-19 (coronavirus disease 2019) is an illness caused by a virus." << endl;
     cout << "\t\t\tThis virus is a new coronavirus that has spread throughout the world." << endl;
     cout << "\t\t\tIt is thought to spread mainly through close contact from person to person." << endl;
@@ -255,14 +256,17 @@ void pharm_methods::e_prescription(){
     cout << "\t\t\t| [9]   HEADACHE                  |" << endl;
     cout << "\t\t\t| [10]  DIARRHOEA                 |" << endl;
     cout << "\t\t\t| [11]  ALLERGY                   |" << endl;
+    cout << "\t\t\t| [0]   BACK                      |" << endl;
     cout << "\t\t\t-----------------------------------" << endl;
 
-    cout << "\n\t\t\tENTER NUMBER TO CHECK PRESCRIPTION" << endl;
+    cout << "\n\t\t\tENTER NUMBER TO CHECK PRESCRIPTION: " ;
     cin >> choice;
 
             switch (choice) {
 
                 case 1: {
+
+
 
                     break;
                 }
@@ -297,7 +301,15 @@ void pharm_methods::e_prescription(){
                     break;
                 }
 
+                case 0: {
+
+                    break;
+
+                }
+
             } //end swtich
+
+    }while(choice != 0);
 
 }
 
