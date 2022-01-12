@@ -81,7 +81,7 @@ int main()
                     break; }
 
             case 0: {
-                  //  pharmX.exit();
+                    pharmX.exit();
                     }
 
         } //end switch

@@ -16,7 +16,7 @@ pharm_methods::~pharm_methods()
 
 void pharm_methods::listofDrugs(){
 
-     system("CLS");
+    system("CLS");
 
     cout << "\t\t\t\t---------- LIST OF MEDICINES ----------" << endl <<endl;
 
@@ -262,9 +262,7 @@ void pharm_methods::e_prescription(){
 
 void pharm_methods::exit(){
 
-
-    system("CLS");
-    cout << "\t\t\tTHANKS FOR USING OUR SYSTEM!" << endl;
+    cout << "\n\t\t\tTHANKS FOR USING OUR SYSTEM!" << endl;
 
 }
 
