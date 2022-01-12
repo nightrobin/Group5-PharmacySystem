@@ -13,6 +13,24 @@ pharm_methods::~pharm_methods()
     //dtor
 }
 
+void pharm_methods::listofAddedDrugs() {
+
+    system("cls");
+    cout << "LIST OF ADDED DRUGS" << endl;
+
+    for(int i = 0; i < medMax; i++){
+        if (med[i].isPurchase){
+            cout << "\n-----------------------------------------------------" << endl;
+            cout << "Name of Drugs   " << i + 1 << ": " << med[i].nameOfmed << endl;
+            cout << "Generic Name    " << i + 1 << ": " << med[i].genericName << endl;
+            cout << "Price of Drugs  " << i + 1 << ": " << med[i].priceOfmed << endl;
+            cout << "-----------------------------------------------------" << endl;
+        } else {
+            cout << "There is no current in the list."  << endl;
+        }
+    }
+
+}
 
 void pharm_methods::listofDrugs(){
 
@@ -103,8 +121,7 @@ void pharm_methods::addMed(){
 
     listofDrugs();
 
-        for (int i = 0; i < medMax; i++){
-
+        for (int i = 0; i < medMax; i++) {
         string genericName;
         string nameOfmed;
         float priceOfmed;
@@ -125,7 +142,6 @@ void pharm_methods::addMed(){
         cout << endl << "-------------------------------------------------" << endl;
 
 
-
         med[i].nameOfmed = nameOfmed;
         med[i].genericName = genericName;
         med[i].priceOfmed = priceOfmed;
@@ -137,7 +153,32 @@ void pharm_methods::addMed(){
 }
 void pharm_methods::take_order(int orderID){
 
- //   cout << "hello world" << endl;
+    string genericName;
+    string nameOfmed;
+    string x;
+    char ans;
+    double priceOfmed;
+    bool isPurchase;
+
+    listofAddedDrugs();
+    cout << "Please input your order" << endl;
+
+    do
+    {
+        cin.ignore();
+        cout << "Name of Product:";
+        getline(cin, nameOfmed);
+
+        cout << "Generic Name:";
+        getline(cin, genericName);
+
+        cout << "Price:";
+        cin >> priceOfmed;
+
+        cout << "Do you want to continue to Order (Y/N):";
+        cin >> ans;
+
+    } while ((ans == 'Y') || (ans == 'y'));
 
 
 }

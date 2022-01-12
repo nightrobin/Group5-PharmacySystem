@@ -25,10 +25,11 @@ int main()
     cout << "\t\t-----------------------------------------" << endl;
     cout << "\t\t|[1] - ADD 10 MEDICINE \t\t\t|" << endl;
     cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
-    cout << "\t\t|[3] - MODIFY ORDER \t\t\t|" << endl;
-    cout << "\t\t|[4] - LIST OF ORDERS \t\t\t|" << endl;
-    cout << "\t\t|[5] - TOTAL PURCHASE \t\t\t|" << endl;
-    cout << "\t\t|[6] - E-PRESCRIPTION \t\t\t|" << endl;
+    cout << "\t\t|[3] - LIST OF ADDED DRUGS \t\t|" << endl;
+    cout << "\t\t|[4] - MODIFY ORDER \t\t\t|" << endl;
+    cout << "\t\t|[5] - LIST OF ORDERS \t\t\t|" << endl;
+    cout << "\t\t|[6] - TOTAL PURCHASE \t\t\t|" << endl;
+    cout << "\t\t|[7] - E-PRESCRIPTION \t\t\t|" << endl;
     cout << "\t\t|[0] - EXIT \t\t\t\t|" << endl;
     cout << "\t\t-----------------------------------------" << endl;
 
@@ -47,13 +48,17 @@ int main()
                     break; }
 
             case 2: {
-
                     pharmX.take_order(orderID);
-
-
                     break; }
 
             case 3: {
+
+                    pharmX.listofAddedDrugs();
+                    system("PAUSE");
+
+                    break; }
+
+            case 4: {
                     system("CLS");
                     cout << "\nPlease enter Medical/Drug ID you want to modify: ";
                     cin >> orderID;
@@ -62,13 +67,13 @@ int main()
                     pharmX.modify(orderID);
                     break; }
 
-            case 4: {
+            case 5: {
                     pharmX.list_of_orders(orderID);
                     //list ng inorder
                     system("PAUSE");
                     break; }
 
-            case 5: {
+            case 6: {
                     pharmX.total_purchase(orderID);
                     //nameofmed
                     //price * quantity
@@ -76,7 +81,7 @@ int main()
                     system("PAUSE");
                     break; }
 
-            case 6: {
+            case 7: {
                     pharmX.e_prescription();
                     break; }
 

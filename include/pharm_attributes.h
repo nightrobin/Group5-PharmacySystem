@@ -11,10 +11,12 @@ class pharm_attributes
         virtual ~pharm_attributes();
 
 
+
+
     string genericName;
     string nameOfmed;
     double priceOfmed;
-    bool isPurchase;
+    bool isPurchase = true;
 
     //discounts and tax
     double discountID = 0.05;
