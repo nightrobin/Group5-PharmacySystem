@@ -15,6 +15,7 @@ class pharm_methods
         static const int medMax = 10;
         pharm_attributes med[medMax];
 
+        void menu();
         void listofDrugs();
         void addMed();
         void take_order(int orderID);

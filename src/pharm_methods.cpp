@@ -11,6 +11,12 @@ pharm_methods::~pharm_methods()
     //dtor
 }
 
+void pharm_methods::menu(){
+
+
+
+}
+
 void pharm_methods::listofDrugs(){
 
      system("CLS");
@@ -161,12 +167,9 @@ void pharm_methods::modify(int orderID){
 
         cout << endl;
 }
+
+
 void pharm_methods::list_of_orders(int orderID){
-
-
-
-}
-void pharm_methods::quantity_of_purch_med(int orderID){
 
     system("CLS");
     cout << "Quantity of purchased medicine" << endl;
