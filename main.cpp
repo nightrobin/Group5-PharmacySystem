@@ -22,7 +22,7 @@ int main()
     cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
 
     cout << "\t\t-----------------------------------------" << endl;
-    cout << "\t\t|[1] - ADD MEDICINE \t\t\t|" << endl;
+    cout << "\t\t|[1] - ADD 10 MEDICINE \t\t\t|" << endl;
     cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
     cout << "\t\t|[3] - MODIFY ORDER \t\t\t|" << endl;
     cout << "\t\t|[4] - LIST OF ORDERS \t\t\t|" << endl;
@@ -53,12 +53,11 @@ int main()
                     system ("pause");
                     break;
             case 3:
-
                     cout << "\nPlease enter Medical/Drug ID you want to modify: ";
                     cin >> orderID;
-
                     cin.clear();
                     fflush(stdin);
+                    pharmX.modify(orderID);
                     break;
             case 4:
 
@@ -79,7 +78,7 @@ int main()
                     break;
 
             case 7:
-                    pharmX.e_prescription();
+                    pharmX.e_prescription(choice);
                     system("pause");
 
                     break;
