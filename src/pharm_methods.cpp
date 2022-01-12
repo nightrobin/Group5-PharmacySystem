@@ -107,7 +107,7 @@ void pharm_methods::addMed(){
 
         string genericName;
         string nameOfmed;
-        double priceOfmed;
+        float priceOfmed;
         bool isPurchace;
 
         cout << "\nPlease input the following details" << endl;
@@ -126,9 +126,9 @@ void pharm_methods::addMed(){
 
 
 
-        nameOfmed = med[i].nameOfmed;
-        genericName = med[i].genericName;
-        priceOfmed = med[i].priceOfmed;
+        med[i].nameOfmed = nameOfmed;
+        med[i].genericName = genericName;
+        med[i].priceOfmed = priceOfmed;
 
         cin.clear();
         fflush(stdin);
@@ -137,7 +137,7 @@ void pharm_methods::addMed(){
 }
 void pharm_methods::take_order(int orderID){
 
-    cout << "hello world" << endl;
+ //   cout << "hello world" << endl;
 
 
 }

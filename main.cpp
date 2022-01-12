@@ -43,11 +43,13 @@ int main()
 
             case 1: {
                     pharmX.addMed();
+                    system("pause");
                     break; }
 
             case 2: {
-                   pharmX.take_order(orderID);
-                   system("PAUSE");
+
+                    pharmX.take_order(orderID);
+
 
                     break; }
 
@@ -79,7 +81,7 @@ int main()
                     break; }
 
             case 0: {
-                    pharmX.exit();
+                  //  pharmX.exit();
                     }
 
         } //end switch
