@@ -78,8 +78,8 @@ int main()
                     break;
 
             case 7:
-                    pharmX.e_prescription(choice);
-                    system("pause");
+                    pharmX.e_prescription();
+
 
                     break;
             case 8:

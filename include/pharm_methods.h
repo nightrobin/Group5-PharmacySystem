@@ -22,7 +22,7 @@ class pharm_methods
         void list_of_orders(int orderID);
         void quantity_of_purch_med(int orderID);
         void total_purchase(int orderID);
-        void e_prescription(int choice);
+        void e_prescription();
 
 
 

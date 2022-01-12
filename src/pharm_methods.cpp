@@ -187,11 +187,11 @@ void pharm_methods::total_purchase(int orderID){
 
 }
 
-void pharm_methods::e_prescription(int choice){
+void pharm_methods::e_prescription(){
 
-
+    int choice;
     system ("CLS");
-    system("COLOR 4");
+
     cout << "\t\t\tCOVID-19 (coronavirus disease 2019) is an illness caused by a virus." << endl;
     cout << "\t\t\tThis virus is a new coronavirus that has spread throughout the world." << endl;
     cout << "\t\t\tIt is thought to spread mainly through close contact from person to person." << endl;
@@ -211,8 +211,50 @@ void pharm_methods::e_prescription(int choice){
     cout << "\t\t\t| [11]  ALLERGY                   |" << endl;
     cout << "\t\t\t-----------------------------------" << endl;
 
+    cout << "\n\t\t\tENTER NUMBER TO CHECK PRESCRIPTION" << endl;
+    cin >> choice;
 
+            switch (choice) {
 
+                case 1: {
+
+                    break;
+                }
+                case 2: {
+                    break;
+                }
+                case 3: {
+                    break;
+                }
+                case 4: {
+                    break;
+                }
+                case 5: {
+                    break;
+                }
+                case 6: {
+                    break;
+                }
+                case 7: {
+                    break;
+                }
+                case 8: {
+                    break;
+                }
+                case 9: {
+                    break;
+                }
+                case 10: {
+                    break;
+                }
+                case 11: {
+                    break;
+                }
+
+            } //end swtich
 
 
 }
+
+
+
