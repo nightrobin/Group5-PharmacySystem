@@ -167,6 +167,8 @@ void pharm_methods::list_of_orders(int orderID){
 
 }
 void pharm_methods::quantity_of_purch_med(int orderID){
+
+    system("CLS");
     cout << "Quantity of purchased medicine" << endl;
 
     int sum(int med[], int medMax);
@@ -175,7 +177,7 @@ void pharm_methods::quantity_of_purch_med(int orderID){
         for(int i = 0; i < medMax; i++)
         if (med[i].isPurchase)
         {
-            cout << "Order ID " << i + 1 << ": " << med[i].nameOfmed << endl;
+            cout << "\nOrder ID " << i + 1 << ": " << med[i].nameOfmed << endl;
         }
     }
 }
@@ -185,7 +187,31 @@ void pharm_methods::total_purchase(int orderID){
 
 }
 
-void pharm_methods::e_prescription(){
+void pharm_methods::e_prescription(int choice){
+
+
+    system ("CLS");
+    system("COLOR 4");
+    cout << "\t\t\tCOVID-19 (coronavirus disease 2019) is an illness caused by a virus." << endl;
+    cout << "\t\t\tThis virus is a new coronavirus that has spread throughout the world." << endl;
+    cout << "\t\t\tIt is thought to spread mainly through close contact from person to person." << endl;
+
+
+    cout << "\n\t\t\t-----------------------------------" << endl;
+    cout << "\t\t\t| [1]   COLD                      |" << endl;
+    cout << "\t\t\t| [2]   FLU                       |"<< endl;
+    cout << "\t\t\t| [3]   COUGH                     |" << endl;
+    cout << "\t\t\t| [4]   FEVER                     |" << endl;
+    cout << "\t\t\t| [5]   SORE-THROAT               |" << endl;
+    cout << "\t\t\t| [6]   MENSTRUAL CRAMPS          |" << endl;
+    cout << "\t\t\t| [7]   TOOTHACHE                 |" << endl;
+    cout << "\t\t\t| [8]   STOMACHACHE               |" << endl;
+    cout << "\t\t\t| [9]   HEADACHE                  |" << endl;
+    cout << "\t\t\t| [10]  DIARRHOEA                 |" << endl;
+    cout << "\t\t\t| [11]  ALLERGY                   |" << endl;
+    cout << "\t\t\t-----------------------------------" << endl;
+
+
 
 
 

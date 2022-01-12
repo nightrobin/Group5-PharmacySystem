@@ -12,7 +12,7 @@ class pharm_methods
         pharm_methods();
         virtual ~pharm_methods();
 
-        static const int medMax = 2;
+        static const int medMax = 10;
         pharm_attributes med[medMax];
 
         void listofDrugs();
@@ -22,7 +22,7 @@ class pharm_methods
         void list_of_orders(int orderID);
         void quantity_of_purch_med(int orderID);
         void total_purchase(int orderID);
-        void e_prescription();
+        void e_prescription(int choice);
 
 
 
