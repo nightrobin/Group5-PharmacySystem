@@ -13,78 +13,6 @@ pharm_methods::~pharm_methods()
     //dtor
 }
 
-void pharm_methods::menu(){
-
-    time_t timetoday;
-    time (&timetoday);
-
-    int choice = -1;
-    int orderID;
-
-    while (choice !=0){
-    system("CLS");
-    cout << "\t\tWelcome to PLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
-    cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
-    cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
-
-    cout << "\t\t-----------------------------------------" << endl;
-    cout << "\t\t|[1] - ADD 10 MEDICINE \t\t\t|" << endl;
-    cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
-    cout << "\t\t|[3] - MODIFY ORDER \t\t\t|" << endl;
-    cout << "\t\t|[4] - LIST OF ORDERS \t\t\t|" << endl;
-    cout << "\t\t|[5] - TOTAL PURCHASE \t\t\t|" << endl;
-    cout << "\t\t|[6] - E-PRESCRIPTION \t\t\t|" << endl;
-    cout << "\t\t|[0] - EXIT \t\t\t\t|" << endl;
-    cout << "\t\t-----------------------------------------" << endl;
-
-    cout << "\n\t\tEnter your choice here: ";
-    cin >> choice;
-
-
-        cin.clear();
-        fflush(stdin);
-
-        switch (choice){
-
-            case 1: {
-                    addMed();
-                    break; }
-
-            case 2: {
-                   take_order(orderID);
-                    break; }
-
-            case 3: {
-                    system("CLS");
-                    cout << "\nPlease enter Medical/Drug ID you want to modify: ";
-                    cin >> orderID;
-                    cin.clear();
-                    fflush(stdin);
-                    modify(orderID);
-                    break; }
-
-            case 4: {
-                    list_of_orders(orderID);
-                    break; }
-
-            case 5: {
-                    total_purchase(orderID);
-                    break; }
-
-            case 6: {
-                    e_prescription();
-                    break; }
-
-            case 0: {
-                    exit();
-                    }
-
-
-
-        } //end switch
-    }
-
-}
 
 void pharm_methods::listofDrugs(){
 
@@ -196,6 +124,8 @@ void pharm_methods::addMed(){
 
         cout << endl << "-------------------------------------------------" << endl;
 
+
+
         nameOfmed = med[i].nameOfmed;
         genericName = med[i].genericName;
         priceOfmed = med[i].priceOfmed;
@@ -256,6 +186,7 @@ void pharm_methods::list_of_orders(int orderID){
 
 
 void pharm_methods::total_purchase(int orderID){
+
 
 }
 
