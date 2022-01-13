@@ -25,9 +25,6 @@ class pharm_methods
         void e_prescription();
         void exit();
 
-
-
-
     protected:
 
     private:

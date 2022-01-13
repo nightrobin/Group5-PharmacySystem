@@ -31,7 +31,6 @@ void pharm_methods::listofAddedDrugs() {
     }
 
 }
-
 void pharm_methods::listofDrugs(){
 
     system("CLS");
@@ -114,7 +113,6 @@ void pharm_methods::listofDrugs(){
     }
 
 }
-
 void pharm_methods::addMed(){
 
     system("CLS");
@@ -209,8 +207,6 @@ void pharm_methods::modify(int orderID){
 
         cout << endl;
 }
-
-
 void pharm_methods::list_of_orders(int orderID){
 
     system("CLS");
@@ -226,19 +222,31 @@ void pharm_methods::list_of_orders(int orderID){
         }
     }
 }
-
-
 void pharm_methods::total_purchase(int orderID){
 
 
 }
 
+
+
 void pharm_methods::e_prescription(){
 
+
     int choice;
+
+   do{
     system ("CLS");
 
-    do{
+    cout << "\n\tDISCLAIMER:" << endl;
+
+    cout << "\t\tThis pharmacy system does not assume any responsibility for any aspect of healthcare" << endl;
+    cout << "\t\tadministered with the aid of materials provided. The information contained" << endl;
+    cout << "\t\therein is not intended to cover all possible uses, directions, precautions," << endl;
+    cout << "\t\twarnings, drug interactions, allergic reactions, or adverse effects. If you have" << endl;
+    cout << "\t\tquestions about the substances you are taking, CHECK WTIH YOUR DOCTOR, NURSE, or PHARMACIST." << endl;
+
+
+    cout << endl;
     cout << "\t\t\tCOVID-19 (coronavirus disease 2019) is an illness caused by a virus." << endl;
     cout << "\t\t\tThis virus is a new coronavirus that has spread throughout the world." << endl;
     cout << "\t\t\tIt is thought to spread mainly through close contact from person to person." << endl;
@@ -265,8 +273,50 @@ void pharm_methods::e_prescription(){
             switch (choice) {
 
                 case 1: {
+                            system("cls");
+
+                                {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
+
+                                    {//AMBROXOL
+                                    cout << "   AMBROXOL\t\tDAILY DOSE:" << endl;
+                                    cout << "\t\t\t\tADULT: 30 mg | 1 Tablet  |" << endl;
+                                    cout << "\t\t\t\t       120 mg| 4 Tablets | Taken in 2 to 3 divede doses" << endl;
+                                    cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                    cout << "\t\t\t\t\tUP TO 2 YEARS: Half teaspoonful | Ambroxol syrup | 2x Daily" << endl;
+                                    cout << "\t\t\t\t\t 2 TO 5 YEARS: Half teaspoonful | Ambroxol syrup | 3x Daily" << endl;
+                                    cout << "\t\t\t\t\t OVER 5 YEARS: 1 teaspoonful    | Ambroxol syrup | 2x-3x Daily" << endl;
+                                    cout << "\n\t\t\tPRECAUTIONS:" << endl;
+                                    cout << "\t\t\t\tIt is advisable to avoid use during the first trimester of pregnancy" << endl;
+                                    }
+                                cout << "\n*****************************************************************************************************" << endl;
+
+                                    {//CARBOCISTEINE
+                                    cout << "   CARBOCISTEINE\tDAILY DOSE:" << endl;
+                                    cout << "\t\t\t\tADULT: 375 mg | 2 Capsules  | 3x a Day" << endl;
+                                    cout << "\t\t\t\t        15 ml | Syrup       | 3x a Day" << endl;
+                                    cout << "\t\t\t\t                1 Sachet    | 3x a Day" << endl;
+                                    cout << "\n\t\t\t\t    REDUCE IF THE SYMPTOMS IMPROVE" << endl;
+                                    cout << "\t\t\t\t        10 ml | Syrup       | 3x a Day" << endl;
+                                    cout << "\t\t\t\t                1 Sachet    | 2x a Day" << endl;
+                                    cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                    cout << "\t\t\t\t\t 2 TO 4  YEARS: 1.25 ml to 2.5 ml| Syrup | 2x a Day" << endl;
+                                    cout << "\t\t\t\t\t 5 TO 11 YEARS: 5 ml             | Syrup | 3x a Day" << endl;
+                                    cout << "\t\t\t\t\t12 To 17 YEARS: 15 ml            | Syrup | 3x a Day" << endl;
+                                    cout << "\n\t\t\tPRECAUTIONS:" << endl;
+                                    cout << "\t\t\t\tIt is advisable to avoid use in patients with history of ulcer, any allergy," << endl;
+                                    cout << "\t\t\t\twho are taking other medications, during pregnancy and breastfeeding" << endl;
+                                    }
 
 
+
+
+
+
+                            system("pause");
 
                     break;
                 }
@@ -300,16 +350,20 @@ void pharm_methods::e_prescription(){
                 case 11: {
                     break;
                 }
-
                 case 0: {
 
                     break;
 
                 }
+                default: {
+
+                cout << "not counted" << endl;
+                   system("pause");
+                }
 
             } //end swtich
 
-    }while(choice != 0);
+    } while (choice != 0);
 
 }
 

@@ -83,6 +83,7 @@ int main()
 
             case 7: {
                     pharmX.e_prescription();
+                    //system("pause");
                     break; }
 
             case 0: {
