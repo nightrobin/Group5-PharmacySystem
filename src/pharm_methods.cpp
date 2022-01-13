@@ -407,7 +407,22 @@ void pharm_methods::e_prescription(){
 
                     system("cls");
 
+                            {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
 
+
+                                {//IBUPROFEN
+                                        cout << "  IBUPROFEN\tDAILY DOSE:" << endl;
+                                        cout << "\t\t\t\tADULT: " << endl;
+                                        cout << "\t\t\t\t    12 to Adult: 200 - 400 mg | 3 - 4 times a day | 6 - 8 hours | leave 4 hours between doeses" << endl;
+                                        cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                        cout << "\t\t\t\t     7 to 9 years: 200 mg | 3x | every 24 hours" << endl;
+                                        cout << "\t\t\t\t   10 to 12 years: 300 mg | 3x | every 24 hours" << endl;
+                                }
+                                cout << "\n*****************************************************************************************************" << endl;
 
 
                     system("pause");
@@ -415,21 +430,54 @@ void pharm_methods::e_prescription(){
                     break;
                 }
                 case 4: {
+                    system("cls");
+
+                      {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
+
+                                {
+                                    cout << "  IBUPROFEN\tDAILY DOSE:" << endl;
+                                    cout << "\t\t\t\tUsed to treat fever and pain from arthritis, menstrual cramps,"<< endl;
+                                    cout << "\t\t\t\tand muscular aches. It works by reducing inflammation." << endl;
+                                    cout << "\n\t\tPRECAUTIONS:" << endl;
+                                    cout << "\t\t\t\tIbuprofen should be only used when only needed as it " << endl;
+                                    cout << "\t\t\t\tmay increase risk or stroke or heart atttack. " << endl;
+                                }
+
+                    system("pause");
                     break;
                 }
                 case 5: {
+                    system("cls");
+
+                    system("pause");
                     break;
                 }
                 case 6: {
+                    system("cls");
+
+                    system("pause");
                     break;
                 }
                 case 7: {
+                    system("cls");
+
+                    system("pause");
                     break;
                 }
                 case 8: {
+                    system("cls");
+
+                    system("pause");
                     break;
                 }
                 case 9: {
+                    system("cls");
+
+                    system("pause");
                     break;
                 }
                 case 0: {
