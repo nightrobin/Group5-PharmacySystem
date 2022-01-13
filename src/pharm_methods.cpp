@@ -356,7 +356,29 @@ void pharm_methods::e_prescription(){
 
                     system("cls");
 
-                    cout << "Mama" << endl;
+                            {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
+
+
+                                    {
+                                    cout << "  MEFENAMIC ACID\tDAILY DOSE:" << endl;
+                                    cout << "\t\t\t\tADULT: " << endl;
+                                    cout << "\t\t\t\t\t Initial Dose:           500 mg | orally once" << endl;
+                                    cout << "\t\t\t\t\t Following Initial Dose: 250 mg | orally every 6 hours as needed" << endl;
+                                    cout << "\t\t\t\t\t Duration of therapy:    Usually not to exceed 1 week" << endl;
+                                    cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                    cout << "\t\t\t\t   14 years or older:" << endl;
+                                    cout << "\t\t\t\t\t              Initial Dose: 500 mg | orally once" << endl;
+                                    cout << "\t\t\t\t\t    Following Initial Dose: 200 mg | orally every 6 hours as needed" << endl;
+                                    cout << "\t\t\t\t\t       Duration of therapy: 2 to 3 Days" << endl;
+                                    cout << "\n\t\t\tPRECAUTIONS:" << endl;
+                                    cout << "\t\t\t\t Do not use mefenamic acid just before or after heart bypass surgery (coronary artery bypass" << endl;
+                                    cout << "\t\t\t\t graft, or CABG). Mefenamic acid may also cause stomach or intestinal bleeding, which can be fatal." << endl;
+                                    }
+
                     system("pause");
                     break;
                 }
@@ -381,21 +403,14 @@ void pharm_methods::e_prescription(){
                 case 9: {
                     break;
                 }
-                case 10: {
-                    break;
-                }
-                case 11: {
-                    break;
-                }
                 case 0: {
 
                     break;
 
                 }
                 default: {
-
-                cout << "not counted" << endl;
-                   system("pause");
+                    cout << "not counted" << endl;
+                    system("pause");
                 }
 
             } //end swtich
