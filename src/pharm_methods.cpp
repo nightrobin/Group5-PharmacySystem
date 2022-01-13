@@ -363,26 +363,55 @@ void pharm_methods::e_prescription(){
                                 }
 
 
-                                    {
-                                    cout << "  MEFENAMIC ACID\tDAILY DOSE:" << endl;
-                                    cout << "\t\t\t\tADULT: " << endl;
-                                    cout << "\t\t\t\t\t Initial Dose:           500 mg | orally once" << endl;
-                                    cout << "\t\t\t\t\t Following Initial Dose: 250 mg | orally every 6 hours as needed" << endl;
-                                    cout << "\t\t\t\t\t Duration of therapy:    Usually not to exceed 1 week" << endl;
-                                    cout << "\n\t\t\t\tCHILDREN:" << endl;
-                                    cout << "\t\t\t\t   14 years or older:" << endl;
-                                    cout << "\t\t\t\t\t              Initial Dose: 500 mg | orally once" << endl;
-                                    cout << "\t\t\t\t\t    Following Initial Dose: 200 mg | orally every 6 hours as needed" << endl;
-                                    cout << "\t\t\t\t\t       Duration of therapy: 2 to 3 Days" << endl;
-                                    cout << "\n\t\t\tPRECAUTIONS:" << endl;
-                                    cout << "\t\t\t\t Do not use mefenamic acid just before or after heart bypass surgery (coronary artery bypass" << endl;
-                                    cout << "\t\t\t\t graft, or CABG). Mefenamic acid may also cause stomach or intestinal bleeding, which can be fatal." << endl;
+                                    {//MEFENAMIC ACID
+                                        cout << "  MEFENAMIC ACID\tDAILY DOSE:" << endl;
+                                        cout << "\t\t\t\tADULT: " << endl;
+                                        cout << "\t\t\t\t\t Initial Dose:           500 mg | orally once" << endl;
+                                        cout << "\t\t\t\t\t Following Initial Dose: 250 mg | orally every 6 hours as needed" << endl;
+                                        cout << "\t\t\t\t\t Duration of therapy:    Usually not to exceed 1 week" << endl;
+                                        cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                        cout << "\t\t\t\t   14 years or older:" << endl;
+                                        cout << "\t\t\t\t\t              Initial Dose: 500 mg | orally once" << endl;
+                                        cout << "\t\t\t\t\t    Following Initial Dose: 200 mg | orally every 6 hours as needed" << endl;
+                                        cout << "\t\t\t\t\t       Duration of therapy: 2 to 3 Days" << endl;
+                                        cout << "\n\t\t\tPRECAUTIONS:" << endl;
+                                        cout << "\t\t\t\t Do not use mefenamic acid just before or after heart bypass surgery (coronary artery bypass" << endl;
+                                        cout << "\t\t\t\t graft, or CABG). Mefenamic acid may also cause stomach or intestinal bleeding, which can be fatal." << endl;
                                     }
+                                    cout << "\n*****************************************************************************************************" << endl;
+
+
+                                    {//PARACETAMOL
+                                        cout << "  PARACETAMOL\t\tDAILY DOSE:" << endl;
+                                        cout << "\t\t\t\tADULT: " << endl;
+                                        cout << "\t\t\t\t   16 years old and Older: 500 mg | 1 g | 4-6 hours up to maximum of 4 g daily" << endl;
+                                        cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                        cout << "\t\t\t\t\t    12 to 15 years: 480 - 750 mg | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t    10 to 11 years: 480 - 500 mg | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t     8 to 9  years: 360 - 375 mg | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t     6 to 7  years: 240 - 250 mg | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t     4 to 5  years: 240 mg       | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t     2 to 3  years: 180 mg       | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t  6 months to 1 yr: 120 mg       | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\t\t\t\t\t        3-5 months: 60 mg        | 4-6 hours up to maximum 4 doses daily" << endl;
+                                        cout << "\n\t\t\tPRECAUTIONS:" << endl;
+                                        cout << "\t\t\t\t Do not use when you are pregnant or breastfeeding, have a serious problem" << endl;
+                                        cout << "\t\t\t\t on your liver." << endl;
+                                    }
+                                    cout << "\n*****************************************************************************************************" << endl;
 
                     system("pause");
                     break;
                 }
                 case 3: {
+
+                    system("cls");
+
+
+
+
+                    system("pause");
+
                     break;
                 }
                 case 4: {
