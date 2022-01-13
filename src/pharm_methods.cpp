@@ -253,17 +253,15 @@ void pharm_methods::e_prescription(){
 
 
     cout << "\n\t\t\t-----------------------------------" << endl;
-    cout << "\t\t\t| [1]   COLD                      |" << endl;
-    cout << "\t\t\t| [2]   FLU                       |"<< endl;
-    cout << "\t\t\t| [3]   COUGH                     |" << endl;
-    cout << "\t\t\t| [4]   FEVER                     |" << endl;
-    cout << "\t\t\t| [5]   SORE-THROAT               |" << endl;
-    cout << "\t\t\t| [6]   MENSTRUAL CRAMPS          |" << endl;
-    cout << "\t\t\t| [7]   TOOTHACHE                 |" << endl;
-    cout << "\t\t\t| [8]   STOMACHACHE               |" << endl;
-    cout << "\t\t\t| [9]   HEADACHE                  |" << endl;
-    cout << "\t\t\t| [10]  DIARRHOEA                 |" << endl;
-    cout << "\t\t\t| [11]  ALLERGY                   |" << endl;
+    cout << "\t\t\t| [1]   COLD/COUGH                |" << endl;
+    cout << "\t\t\t| [2]   FEVER                     |" << endl;
+    cout << "\t\t\t| [3]   SORE-THROAT               |" << endl;
+    cout << "\t\t\t| [4]   MENSTRUAL CRAMPS          |" << endl;
+    cout << "\t\t\t| [5]   TOOTHACHE                 |" << endl;
+    cout << "\t\t\t| [6]   STOMACHACHE               |" << endl;
+    cout << "\t\t\t| [7]   HEADACHE                  |" << endl;
+    cout << "\t\t\t| [8]   DIARRHOEA                 |" << endl;
+    cout << "\t\t\t| [9]   ALLERGY                   |" << endl;
     cout << "\t\t\t| [0]   BACK                      |" << endl;
     cout << "\t\t\t-----------------------------------" << endl;
 
@@ -308,19 +306,40 @@ void pharm_methods::e_prescription(){
                                     cout << "\t\t\t\t\t12 To 17 YEARS: 15 ml            | Syrup | 3x a Day" << endl;
                                     cout << "\n\t\t\tPRECAUTIONS:" << endl;
                                     cout << "\t\t\t\tIt is advisable to avoid use in patients with history of ulcer, any allergy," << endl;
-                                    cout << "\t\t\t\twho are taking other medications, during pregnancy and breastfeeding" << endl;
+                                    cout << "\t\t\t\twho are taking other medications, during pregnancy and breastfeeding." << endl;
                                     }
+                                cout << "\n*****************************************************************************************************" << endl;
 
-
-
-
-
+                                    {//GUAIFENESIN
+                                    cout << "   GUAIFENESIN\t\tDAILY DOSE:" << endl;
+                                    cout << "\t\t\t\tADULT: 200 mg to 400 mg | Every 4 hours  | not to exceed 2.4 g/Day" << endl;
+                                    cout << "\t\t\t\t       600 mg to 1200 mg| Every 12 hours | not to exceed 2.4 g/Day" << endl;
+                                    cout << "\n\t\t\t\tCHILDREN:" << endl;
+                                    cout << "\t\t\t\t   Immidiate release formulation:" << endl;
+                                    cout << "\t\t\t\t\t LESS THAN 2 YEARS: 12 mg/kg/day    | orally in 6 divided doses" << endl;
+                                    cout << "\t\t\t\t\t      2 TO 5 YEARS: 100 mg to 200 mg| orally every 4 hours as needed | not to exceed 600 mg/Day" << endl;
+                                    cout << "\t\t\t\t\t     6 To 11 YEARS: 100 mg to 200 mg| orally every 4 hours as needed | not to exceed 1.2 g/Day" << endl;
+                                    cout << "\t\t\t\t\t  12 YEAR OR OLDER: 200 mg to 400 mg| orally every 4 hours as needed | not to exceed 2.4 g/Day" << endl;
+                                    cout << "\t\t\t\t   Sustained release formulation:" << endl;
+                                    cout << "\t\t\t\t\t      2 TO 5 YEARS: 300 mg           | orally every 12 hours | not to exceed 600 mg/Day" << endl;
+                                    cout << "\t\t\t\t\t     6 To 11 YEARS: 600 mg           | orally every 12 hours | not to exceed 1.2 g/Day" << endl;
+                                    cout << "\t\t\t\t\t  12 YEAR OR OLDER: 600 mg to 1200 mg| orally every 12 hours | not to exceed 2.4 g/Day" << endl;
+                                    cout << "\n\t\t\tPRECAUTIONS:" << endl;
+                                    cout << "\t\t\t\t Do not use this if you are allergic to guaifenesin." << endl;
+                                    cout << "\t\t\t\t Use this medicine exactly as directed on the label or as prescribed by your doctor." << endl;
+                                    }
+                                cout << "\n*****************************************************************************************************" << endl;
 
                             system("pause");
 
                     break;
                 }
                 case 2: {
+
+                    system("cls");
+
+                    cout << "Mama" << endl;
+                    system("pause");
                     break;
                 }
                 case 3: {
