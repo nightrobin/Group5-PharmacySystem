@@ -4,6 +4,8 @@
 
 using namespace std;
 
+const int maxrow = 10;
+
 class pharm_attributes
 {
     public:

@@ -13,6 +13,16 @@ pharm_methods::~pharm_methods()
     //dtor
 }
 
+string genericName;
+    string nameOfmed;
+    string x;
+    string GenName[maxrow] = {};
+    string NameMed[maxrow] = {};
+    double Price[maxrow] = {};
+    char ans;
+    double priceOfmed;
+    bool isPurchase;
+
 void pharm_methods::listofAddedDrugs() {
 
     system("cls");
@@ -151,33 +161,35 @@ void pharm_methods::addMed(){
 }
 void pharm_methods::take_order(int orderID){
 
-    string genericName;
-    string nameOfmed;
-    string x;
-    char ans;
-    double priceOfmed;
-    bool isPurchase;
+    system("CLS");
 
-    listofAddedDrugs();
+
+
+    listofDrugs();
     cout << "Please input your order" << endl;
 
-    do
-    {
-        cin.ignore();
+
+
         cout << "Name of Product:";
         getline(cin, nameOfmed);
-
         cout << "Generic Name:";
         getline(cin, genericName);
-
         cout << "Price:";
         cin >> priceOfmed;
 
-        cout << "Do you want to continue to Order (Y/N):";
-        cin >> ans;
 
-    } while ((ans == 'Y') || (ans == 'y'));
 
+    for (int x = 0; x < maxrow; x++)
+    {
+        if (NameMed[x] == "\0")
+            {
+                NameMed[x] = nameOfmed;
+                GenName[x] = genericName;
+                Price[x] = priceOfmed;
+
+                break;
+            }
+    }
 
 }
 void pharm_methods::modify(int orderID){
@@ -210,17 +222,23 @@ void pharm_methods::modify(int orderID){
 void pharm_methods::list_of_orders(int orderID){
 
     system("CLS");
-    cout << "Quantity of purchased medicine" << endl;
+    cout << "\t\t\t\t---------- LIST OF ORDERS ----------" << endl <<endl;
 
-    int sum(int med[], int medMax);
+    int ctr = 0;
+    cout << "PRODUCT NO.\tPRODUCT NAME|mg/ml\tGENERIC NAME\tPRICE" << endl;
+    for (int x = 0; x < maxrow; x++)
     {
-        int sum = 0;
-        for(int i = 0; i < medMax; i++)
-        if (med[i].isPurchase)
+        if (NameMed[x] != "\0")
         {
-            cout << "\nOrder ID " << i + 1 << ": " << med[i].nameOfmed << endl;
+            ctr++;
+            cout << "   " << ctr << "                " << NameMed[x] << "                " << GenName[x] << "       " << Price[x] << endl;
         }
     }
+    if (ctr == 0)
+    {
+        cout << "No Orders yet" << endl;
+    }
+
 }
 void pharm_methods::total_purchase(int orderID){
 
