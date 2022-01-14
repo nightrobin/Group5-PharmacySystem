@@ -43,57 +43,63 @@ int main()
         switch (choice){
 
             case 1: {
-                    pharmX.addMed();
-                    system("pause");
-                    break; }
+                            pharmX.addMed();
+                            system("PAUSE");
 
+                    break; }
             case 2: {
-                    pharmX.take_order(orderID);
+                            pharmX.take_order(orderID);
+
                     break; }
 
             case 3: {
-
-                    pharmX.listofAddedDrugs();
-                    system("PAUSE");
+                            pharmX.listofAddedDrugs();
+                            system("PAUSE");
 
                     break; }
 
             case 4: {
-                    system("CLS");
-                    cout << "\nPlease enter Medical/Drug ID you want to modify: ";
-                    cin >> orderID;
-                    cin.clear();
-                    fflush(stdin);
-                    pharmX.modify(orderID);
+                            system("CLS");
+                            cout << "\nPlease enter Medical/Drug ID you want to modify: ";
+                            cin >> orderID;
+                            cin.clear();
+                            fflush(stdin);
+                            pharmX.modify(orderID);
+
                     break; }
 
             case 5: {
-                    pharmX.list_of_orders(orderID);
-                    //list ng inorder
-                    system("PAUSE");
+                            pharmX.list_of_orders(orderID);
+                            //list ng inorder
+                            system("PAUSE");
+
                     break; }
 
             case 6: {
-                    pharmX.total_purchase(orderID);
-                    //nameofmed
-                    //price * quantity
-                    system("CLS");
-                    system("PAUSE");
+                            pharmX.total_purchase(orderID);
+                            //nameofmed
+                            //price * quantity
+                            system("CLS");
+                            system("PAUSE");
+
                     break; }
 
             case 7: {
-                    pharmX.e_prescription();
-                    //system("pause");
+                            pharmX.e_prescription();
+
                     break; }
 
             case 0: {
-                    pharmX.exit();
+                            pharmX.exit();
                     }
+
+            default: {
+                    cout << "\n\t\t\t\tNOT VALID INPUT" << endl;
+                    system("pause");
+                     }
 
         } //end switch
     }
 
-
    return 0;
-
    }

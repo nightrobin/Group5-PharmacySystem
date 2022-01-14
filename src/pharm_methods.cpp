@@ -13,7 +13,7 @@ pharm_methods::~pharm_methods()
     //dtor
 }
 
-string genericName;
+    string genericName;
     string nameOfmed;
     string x;
     string GenName[maxrow] = {};
@@ -249,6 +249,8 @@ void pharm_methods::total_purchase(int orderID){
 
 void pharm_methods::e_prescription(){
 
+    time_t timetoday;
+    time (&timetoday);
 
     int choice;
 
@@ -256,13 +258,13 @@ void pharm_methods::e_prescription(){
     system ("CLS");
 
     cout << "\n\tDISCLAIMER:" << endl;
-
     cout << "\t\tThis pharmacy system does not assume any responsibility for any aspect of healthcare" << endl;
     cout << "\t\tadministered with the aid of materials provided. The information contained" << endl;
     cout << "\t\therein is not intended to cover all possible uses, directions, precautions," << endl;
     cout << "\t\twarnings, drug interactions, allergic reactions, or adverse effects. If you have" << endl;
     cout << "\t\tquestions about the substances you are taking, CHECK WTIH YOUR DOCTOR, NURSE, or PHARMACIST." << endl;
 
+    cout << "\n\n\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
 
     cout << endl;
     cout << "\t\t\tCOVID-19 (coronavirus disease 2019) is an illness caused by a virus." << endl;
@@ -276,10 +278,8 @@ void pharm_methods::e_prescription(){
     cout << "\t\t\t| [3]   SORE-THROAT               |" << endl;
     cout << "\t\t\t| [4]   MENSTRUAL CRAMPS          |" << endl;
     cout << "\t\t\t| [5]   TOOTHACHE                 |" << endl;
-    cout << "\t\t\t| [6]   STOMACHACHE               |" << endl;
+    cout << "\t\t\t| [6]   STOMACH ACHE              |" << endl;
     cout << "\t\t\t| [7]   HEADACHE                  |" << endl;
-    cout << "\t\t\t| [8]   DIARRHOEA                 |" << endl;
-    cout << "\t\t\t| [9]   ALLERGY                   |" << endl;
     cout << "\t\t\t| [0]   BACK                      |" << endl;
     cout << "\t\t\t-----------------------------------" << endl;
 
@@ -350,8 +350,7 @@ void pharm_methods::e_prescription(){
 
                             system("pause");
 
-                    break;
-                }
+                    break;}
                 case 2: {
 
                     system("cls");
@@ -401,8 +400,7 @@ void pharm_methods::e_prescription(){
                                     cout << "\n*****************************************************************************************************" << endl;
 
                     system("pause");
-                    break;
-                }
+                    break;}
                 case 3: {
 
                     system("cls");
@@ -427,8 +425,7 @@ void pharm_methods::e_prescription(){
 
                     system("pause");
 
-                    break;
-                }
+                    break;}
                 case 4: {
                     system("cls");
 
@@ -448,45 +445,67 @@ void pharm_methods::e_prescription(){
                                 }
 
                     system("pause");
-                    break;
-                }
+                    break;}
                 case 5: {
                     system("cls");
+                      {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
 
+                                {//TYLENOL #3
+                                cout << "  TYLENOL #3\t\tDAILY DOSE:" << endl;
+                                cout << "\t\t\t\t  Adults:" << endl;
+                                cout << "\t\t\t\t\t Tablets: 1 - 2 Tablets every 4 hours as needed to " << endl;
+                                cout << "\t\t\t\t\t treat acute pain." << endl;
+                                cout << "\t\t\t\t\t Oral Solution: 15 ml every hours as needed." << endl;
+                                }
+                                cout << "\n*****************************************************************************************************" << endl;
                     system("pause");
-                    break;
-                }
+                    break;}
                 case 6: {
                     system("cls");
+                        {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
 
+                                    {//LOPERAMIDE
+                                        cout << "  LOPERAMIDE\t\tDAILY DOSE:" << endl;
+                                        cout << "\t\t\t\t  Adults:" << endl;
+                                        cout << "\t\t\t\t\t   Diarrhea Acute:  4 mg | orally | after the first stool" << endl;
+                                        cout << "\t\t\t\t\t\t\t Maximum Dose: 16 mg | per day" << endl;
+                                        cout << "\n\t\t\t\t\t Diarrhea Chronic: 4 mg | orally | after first stool" << endl;
+                                        cout << "\t\t\t\t\t                   2 mg | orally | after each unformed stool" << endl;
+                                        cout << "\t\t\t\t\t\t\t Maximum Dose: 16 mg | per day" << endl;
+                                    }
                     system("pause");
-                    break;
-                }
+                    break;}
                 case 7: {
                     system("cls");
+                       {//CLASSIFICATIONS
+                                cout << "=====================================================================================================" << endl;
+                                cout << "MEDICINE NAME\t\tDESCRIPTION" << endl;
+                                cout << "=====================================================================================================" << endl;
+                                }
+
+                                    {//NAPROXEN
+                                        cout << "  NAPROXEN\t\tDAILY DOSE:" << endl;
+                                        cout << "\t\t\t\t  Adults:" << endl;
+                                        cout << "\t\t\t\t\t     Older and 12 Years: 1 Tablet | every 8 to 12 hours" << endl;
+                                        cout << "\t\t\t\t  Children:" << endl;
+                                        cout << "\t\t\t\t\t     Ask doctor" << endl;
+                                    }
 
                     system("pause");
-                    break;
-                }
-                case 8: {
-                    system("cls");
-
-                    system("pause");
-                    break;
-                }
-                case 9: {
-                    system("cls");
-
-                    system("pause");
-                    break;
-                }
+                    break;}
                 case 0: {
 
-                    break;
-
-                }
-                default: {
-                    cout << "not counted" << endl;
+                    break;}
+                default:{
+                    cout << "\n\t\t\t\tNOT VALID INPUT" << endl;
                     system("pause");
                 }
 
