@@ -517,7 +517,21 @@ void pharm_methods::e_prescription(){
 
 void pharm_methods::exit(){
 
-    cout << "\n\t\t\tTHANKS FOR USING OUR SYSTEM!" << endl;
+   system("COLOR 9");
+   system("CLS");
+    cout << "\n\t\t\t\tTHANKS FOR USING OUR SYSTEM!" << endl;
+    cout << "\n\t\t\tPROJECT IN FUNDAMENTALS OF PROGRAMMING" << endl;
+    cout << "\t\t\t---------- GROUP 5: BSIT 1-4 ---------";
+
+    cout << endl;
+
+    cout << "\t\t\tMEMBERS:" << endl;
+    cout << endl;
+    cout << "\t\t\t\tMACEDA \n\t\t\t\tDAGOHOY \n\t\t\t\tVELASQUEZ \n\t\t\t\tLEONARDO \n\t\t\t\tPALMA";
+    cout << "\n\t\t\t\tFLORES \n\t\t\t\tMADRIDANO \n\t\t\t\tCASUGA \n\t\t\t\tGUATNO";
+
+    cout << endl;
+
 
 }
 

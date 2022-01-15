@@ -93,13 +93,7 @@ int main()
                             pharmX.exit();
                     }
 
-            default: {
-                    cout << "\n\t\t\t\tNOT VALID INPUT" << endl;
-                    system("pause");
-                     }
-
         } //end switch
     }
 
-   return 0;
    }
