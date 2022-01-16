@@ -30,12 +30,15 @@ void pharm_methods::listofAddedDrugs() {
 
     for(int i = 0; i < medMax; i++){
         if (med[i].isPurchase){
-            cout << "\n-----------------------------------------------------" << endl;
+
+            cout << endl << "-----------------------------------------------" << endl;
+            cout << "DRUG KEY NO. " << i  + 1;
+            cout << endl << "-----------------------------------------------" << endl;
             cout << "Name of Drugs    #" << i + 1 << ": " << med[i].nameOfmed << endl;
             cout << "Generic Name     #" << i + 1 << ": " << med[i].genericName << endl;
             cout << "Variant of Drug  #" << i + 1 << ": " << med[i].typeOfmed << endl;
             cout << "Price of Drugs   #" << i + 1 << ": " << med[i].priceOfmed << endl;
-            cout << "-----------------------------------------------------" << endl;
+            cout << "-----------------------------------------------" << endl;
         }
     }
 
