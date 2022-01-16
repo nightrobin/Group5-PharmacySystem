@@ -80,7 +80,6 @@ int main()
                             //nameofmed
                             //price * quantity
                             system("CLS");
-                            system("PAUSE");
 
                     break; }
 

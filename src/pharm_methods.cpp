@@ -168,32 +168,50 @@ void pharm_methods::take_order(int orderID){
 
     system("CLS");
 
-
-
     listofAddedDrugs();
-    cout << "Please input your order" << endl;
 
-        cout << "Name of Product: ";
-        getline(cin, nameOfmed);
+    int numofOrders;
 
-        cout << "Generic Name: ";
-        getline(cin, genericName);
+    cout << "How many would you like to order: " << endl;
+    cout << "(Maximum of 10 orders only" << endl;
+    cin >> numofOrders;
 
-        cout << "Price: ";
-        cin >> priceOfmed;
+    cin.clear();
+    fflush(stdin);
+
+    if (numofOrders > 10){
+
+        cout << "You've reached the limit" << endl;
+        system("pause");
+
+    }
+    else{
+
+     for (int x = 0; x < numofOrders; x++)
+     {
+
+        cout << "Please input your order" << endl;
+
+            cout << "Name of Product: ";
+            getline(cin, nameOfmed);
+
+            cout << "Generic Name: ";
+            getline(cin, genericName);
+
+            cout << "Price: ";
+            cin >> priceOfmed;
+
+            cin.clear();
+            fflush(stdin);
 
 
-
-    for (int x = 0; x < maxrow; x++)
-    {
-        if (NameMed[x] == "\0")
-            {
                 NameMed[x] = nameOfmed;
                 GenName[x] = genericName;
                 Price[x] = priceOfmed;
-                break;
-            }
+
+
     }
+    }// end else
 
 }
 void pharm_methods::modify(int orderID){
@@ -248,7 +266,15 @@ void pharm_methods::list_of_orders(int orderID){
 }
 void pharm_methods::total_purchase(int orderID){
 
+    list_of_orders(orderID);
 
+    float total;
+
+    total = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9];
+
+    cout << "The total is: " << total << endl;
+
+    system("pause");
 }
 
 
