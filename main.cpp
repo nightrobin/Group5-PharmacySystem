@@ -26,7 +26,7 @@ int main()
     cout << "\t\t|[1] - ADD 10 MEDICINE \t\t\t|" << endl;
     cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
     cout << "\t\t|[3] - LIST OF ADDED DRUGS \t\t|" << endl;
-    cout << "\t\t|[4] - MODIFY ORDER \t\t\t|" << endl;
+    cout << "\t\t|[4] - MODIFY LIST OF ADDED DRUG \t|" << endl;
     cout << "\t\t|[5] - LIST OF ORDERS \t\t\t|" << endl;
     cout << "\t\t|[6] - TOTAL PURCHASE \t\t\t|" << endl;
     cout << "\t\t|[7] - E-PRESCRIPTION \t\t\t|" << endl;

@@ -14,10 +14,11 @@ class pharm_attributes
 
 
 
-
+    int quantity;
     string genericName;
     string nameOfmed;
-    double priceOfmed;
+    string typeOfmed;
+    double priceOfmed = 0;
     bool isPurchase = true;
 
     //discounts and tax
