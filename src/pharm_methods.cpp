@@ -26,6 +26,7 @@ pharm_methods::~pharm_methods()
 void pharm_methods::listofAddedDrugs() {
 
     system("cls");
+
     cout << "LIST OF ADDED DRUGS" << endl;
 
     for(int i = 0; i < medMax; i++){
@@ -34,10 +35,10 @@ void pharm_methods::listofAddedDrugs() {
             cout << endl << "-----------------------------------------------" << endl;
             cout << "DRUG KEY NO. " << i  + 1;
             cout << endl << "-----------------------------------------------" << endl;
-            cout << "Name of Drugs    #" << i + 1 << ": " << med[i].nameOfmed << endl;
-            cout << "Generic Name     #" << i + 1 << ": " << med[i].genericName << endl;
-            cout << "Variant of Drug  #" << i + 1 << ": " << med[i].typeOfmed << endl;
-            cout << "Price of Drugs   #" << i + 1 << ": " << med[i].priceOfmed << endl;
+            cout << "Name of Drugs    " << i + 1 << ": " << med[i].nameOfmed << endl;
+            cout << "Generic Name     " << i + 1 << ": " << med[i].genericName << endl;
+            cout << "Variant of Drug  " << i + 1 << ": " << med[i].typeOfmed << endl;
+            cout << "Price of Drugs   " << i + 1 << ": " << med[i].priceOfmed << endl;
             cout << "-----------------------------------------------" << endl;
         }
     }
@@ -129,6 +130,8 @@ void pharm_methods::addMed(){
 
     system("CLS");
 
+   // listofDrugs();
+
         string genericName;
         string nameOfmed;
         string typeOfmed;
@@ -137,7 +140,6 @@ void pharm_methods::addMed(){
         cout << "Please input the following details" << endl;
 
         for (int i = 0; i < medMax; i++) {
-
 
         cout << endl << "-------------------------------------------------" << endl;
         cout << "DRUG KEY NO. " << i  + 1;
@@ -161,9 +163,9 @@ void pharm_methods::addMed(){
 
         cin.clear();
         fflush(stdin);
-
         }
 }
+
 void pharm_methods::take_order(int orderID){
 
     system("CLS");
@@ -173,7 +175,7 @@ void pharm_methods::take_order(int orderID){
     int numofOrders;
 
     cout << "How many would you like to order: " << endl;
-    cout << "(Maximum of 10 orders only" << endl;
+    cout << "(Maximum of 10 orders only)" << endl;
     cin >> numofOrders;
 
     cin.clear();
@@ -273,7 +275,7 @@ void pharm_methods::total_purchase(int orderID){
     float vat;
 
     total = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9];
-    vat = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9] /0.12;
+    vat = total * 0.12;
 
     cout << "The total is: " << total << endl;
     cout << "total with vat: " << vat << endl;
