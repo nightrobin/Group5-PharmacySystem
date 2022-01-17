@@ -43,57 +43,57 @@ int main()
         switch (choice){
 
             case 1: {
-                            pharmX.addMed();
-                            system("PAUSE");
+                        pharmX.addMed();
+                        system("PAUSE");
 
                     break; }
             case 2: {
-                            pharmX.take_order();
+                        pharmX.take_order();
 
                     break; }
 
             case 3: {
-                            pharmX.listofAddedDrugs();
-                            system("PAUSE");
+                        pharmX.listofAddedDrugs();
+                        system("PAUSE");
 
                     break; }
 
             case 4: {
-                            system("CLS");
-                            cout << "\nPlease enter Medical/Drug ID you want to modify: ";
-                            cin >> orderID;
-                            cin.clear();
-                            fflush(stdin);
-                            pharmX.modify(orderID);
+                        system("CLS");
+                        cout << "\nPlease enter Medical/Drug ID you want to modify: ";
+                        cin >> orderID;
+                        cin.clear();
+                        fflush(stdin);
+                        pharmX.modify(orderID);
 
                     break; }
 
             case 5: {
-                            pharmX.list_of_orders();
-                            //list ng inorder
-                            system("PAUSE");
+                        pharmX.list_of_orders();
+                        //list ng inorder
+                        system("PAUSE");
 
                     break; }
 
             case 6: {
-                            pharmX.total_purchase(orderID);
-                            //nameofmed
-                            //price * quantity
-                            system("CLS");
+                        pharmX.total_purchase(orderID);
+                        //nameofmed
+                        //price * quantity
+                        system("CLS");
 
                     break; }
 
             case 7: {
-                            pharmX.e_prescription();
+                        pharmX.e_prescription();
 
                     break; }
 
             case 0: {
-                            pharmX.exit();
-                            break;
+                        pharmX.exit();
+                        break;
                     }
 
-        } //end switch
+    } //end switch
     }
 
    }
