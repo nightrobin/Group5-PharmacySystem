@@ -201,6 +201,8 @@ void pharm_methods::take_order(int orderID){
             cout << "Price: ";
             cin >> priceOfmed;
 
+            cout<<" "<<endl;
+
             cin.clear();
             fflush(stdin);
 
@@ -250,12 +252,11 @@ void pharm_methods::list_of_orders(int orderID){
 
     int ctr = 0;
     cout << "PRODUCT NO.\tPRODUCT NAME|mg/ml\tGENERIC NAME\tPRICE" << endl;
-    for (int x = 0; x < maxrow; x++)
-    {
+     for(int x = 0; x < medMax; x++){
         if (NameMed[x] != "\0")
         {
             ctr++;
-            cout << "   " << ctr << "                " << NameMed[x] << "                " << GenName[x] << "       " << Price[x] << endl;
+            cout << "Order ID " << ctr + 0 << ":         " << NameMed[x] << "                   " << GenName[x] << "               " << Price[x] << endl;
         }
     }
     if (ctr == 0)
