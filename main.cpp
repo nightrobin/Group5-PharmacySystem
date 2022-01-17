@@ -90,6 +90,7 @@ int main()
 
             case 0: {
                             pharmX.exit();
+                            break;
                     }
 
         } //end switch
