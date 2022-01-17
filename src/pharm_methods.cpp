@@ -291,27 +291,6 @@ void pharm_methods::total_purchase(int orderID){
 
                 cout << endl;
 
-
-        } else  if (recieptAsk == 'N' || recieptAsk == 'n'){
-
-                cout << "\n\t\tSUMMARY OF PURCHASE" << endl;
-
-                list_of_orders_forReceipt();
-
-                cout << "\n\t\t*************************************************" << endl;
-                cout << "\t\tVATABLE: " << "\t\t\t" << "P" << vatable <<endl;
-                cout << "\t\tVALUE ADDED TAX (12%): " << "\t\t" << "P" << VAT <<endl;
-                cout << "\t\tVAT Exempt Sales: " << "\t\t" << "P" << VAT_exempt <<endl;
-                cout << "\t\tZero Rated Sales: " << "\t\t" << "P" << ZERO_rated_sales <<endl;
-                cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<TOTAL <<endl;
-                cout << "\t\t*************************************************" << endl;
-
-                cout << "\n\t\tBUYER'S DETAIL" <<endl;
-                cout << "\t\tCostumer Name: \t\t" << nameOfcostumer << endl;
-                cout << "\t\tContact No: \t\t" << contactOfcostumer << endl;
-                cout << "\t\tAddress: \t\t" << addressOfcostumer << endl;
-                cout << "\t\tAge: \t\t" << ageOfcostumer << endl;
-
         } else {
 
             cout << "\nY/N input only.";
