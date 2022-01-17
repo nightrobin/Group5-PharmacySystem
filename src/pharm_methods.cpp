@@ -1,6 +1,7 @@
 #include "pharm_methods.h"
 #include <ctime>
 #include <cstdlib>
+#include <algorithm>
 
 pharm_methods::pharm_methods()
 {
@@ -95,12 +96,13 @@ void pharm_methods::take_order(){
 
     int numofOrders;
 
-    cout << "How many would you like to order: " << endl;
-    cout << "(Maximum of 10 orders only" << endl;
-    cin >> numofOrders;
+                    cout << "Please enter your name: ";
+                    getline(cin, nameOfcostumer);
+                    transform(nameOfcostumer.begin(), nameOfcostumer.end(), nameOfcostumer.begin(), ::toupper);
 
                     cout << "Please input your address here: ";
                     getline(cin, addressOfcostumer);
+                    transform(addressOfcostumer.begin(), addressOfcostumer.end(), addressOfcostumer.begin(), ::toupper);
 
                     cout << "Please enter your contact number: ";
                     getline(cin, contactOfcostumer);
@@ -216,9 +218,9 @@ void pharm_methods::list_of_orders_forReceipt(){
         {
             ctr++;
             cout << "\n\t\t************************************" << endl;
-            cout << "\t\tOrder ID " << ctr + 0 << endl;
             cout << "\t\tProduct Name: " <<  GenName[x]<< "(" << NameMed[x] << ")" << endl;
-            cout << "\t\tPhp. " <<Price[x] << " \tx1"<< endl;
+            cout << "\t\tProduct No. " << ctr + 0 << endl;
+            cout << "\t\tPhp. " << Price[x] << " \tx1"<< endl;
             cout << "\t\t************************************" << endl;
 
         }
@@ -285,7 +287,7 @@ void pharm_methods::total_purchase(int orderID){
 
                 cout << "\n\t\tThis serves as your Sales Invoice" << endl;
                 cout << "\t\tPurchase No: 0000" << rand() << endl;
-                cout << "\n\t\t\THIS INVOICE/RECEIPT SHALL BE \n\t\tVALID FOR FIVE(5) YEARS FROM \n\t\tTHE DATE OF PERMIT TO USE" <<endl;
+                cout << "\n\t\tTHIS INVOICE/RECEIPT SHALL BE \n\t\tVALID FOR FIVE(5) YEARS FROM \n\t\tTHE DATE OF PERMIT TO USE" <<endl;
 
                 cout << endl;
 
@@ -305,10 +307,10 @@ void pharm_methods::total_purchase(int orderID){
                 cout << "\t\t*************************************************" << endl;
 
                 cout << "\n\t\tBUYER'S DETAIL" <<endl;
-                cout << "\t\tCOSTUMER NAME: " << nameOfcostumer << endl;
-                cout << "\t\tCONTACT NO: " << contactOfcostumer << endl;
-                cout << "\t\tADDRESS: " << addressOfcostumer << endl;
-                cout << "\t\tAGE: " << ageOfcostumer << endl;
+                cout << "\t\tCostumer Name: \t\t" << nameOfcostumer << endl;
+                cout << "\t\tContact No: \t\t" << contactOfcostumer << endl;
+                cout << "\t\tAddress: \t\t" << addressOfcostumer << endl;
+                cout << "\t\tAge: \t\t" << ageOfcostumer << endl;
 
         } else {
 
@@ -605,7 +607,6 @@ void pharm_methods::exit(){
     cout << "\n\t\t\t\tFLORES \n\t\t\t\tMADRIDANO \n\t\t\t\tCASUGA \n\t\t\t\tGUATNO";
 
     cout << endl;
-
 
 }
 

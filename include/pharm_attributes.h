@@ -12,8 +12,6 @@ class pharm_attributes
          pharm_attributes();
         virtual ~pharm_attributes();
 
-
-
     int quantity;
     string genericName;
     string nameOfmed;
