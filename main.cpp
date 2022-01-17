@@ -44,7 +44,7 @@ int main()
 
             case 1: {
                             pharmX.addMed();
-                            //system("PAUSE");
+                            system("PAUSE");
 
                     break; }
             case 2: {
