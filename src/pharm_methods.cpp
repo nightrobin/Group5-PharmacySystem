@@ -269,10 +269,13 @@ void pharm_methods::total_purchase(int orderID){
     list_of_orders(orderID);
 
     float total;
+    float vat;
 
     total = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9];
+    vat = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9] /0.12;
 
     cout << "The total is: " << total << endl;
+    cout << "total with vat: " << vat << endl;
 
     system("pause");
 }
