@@ -1,7 +1,6 @@
 #include "pharm_methods.h"
 #include <ctime>
-
-
+#include <cstdlib>
 
 pharm_methods::pharm_methods()
 {
@@ -13,13 +12,19 @@ pharm_methods::~pharm_methods()
     //dtor
 }
 
+    //for costumer's info
+    string nameOfcostumer;
+    string contactOfcostumer;
+    string ageOfcostumer;
+    string addressOfcostumer;
+
+    int rand();
     string genericName;
     string nameOfmed;
     string x;
     string GenName[maxrow] = {};
     string NameMed[maxrow] = {};
     double Price[maxrow] = {};
-    char ans;
     double priceOfmed;
     bool isPurchase;
 
@@ -43,88 +48,7 @@ void pharm_methods::listofAddedDrugs() {
     }
 
 }
-void pharm_methods::listofDrugs(){
 
-    system("CLS");
-
-    cout << "\t\t\t\t---------- LIST OF MEDICINES ----------" << endl <<endl;
-
-    cout << "**************************************************************************************************************" << endl;
-    cout << "PRODUCT NO.\t\t\tPRODUCT NAME|mg/ml\t\t\tGENERIC NAME\t\t\tPRICE" << endl;
-    cout << "**************************************************************************************************************" << endl;
-
-
-    {//COUGHS AND COLDS
-    cout << "\t\t\t\tFOR COUGH AND COLDS" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-
-        //Mucosolvan Brand
-    cout << "   0\t\t\t    AMBROXOL 15mg/60ml Syrup\t\t\tMucosolvan\t\t\tP30.00" << endl;
-    cout << "   1\t\t\t    AMBROXOL 30mg/60ml Syrup\t\t\tMucosolvan\t\t\tP35.00"<< endl;
-    cout << "   2\t\t\t    AMBROXOL 30mg Tab\t\t\t\tMucosolvan\t\t\tP1.25" << endl;
-        //Ambrolex Brand
-    cout << "   3\t\t\t    AMBROXOL 30mg/60ml Syrup\t\t\tAmbrolex\t\t\tP35.00" << endl;
-        //Solmux Brand
-    cout << "   4\t\t\t    CARBOCISTEINE 500mg Cap\t\t\tSolmux\t\t\t\tP2.75" << endl;
-    cout << "   5\t\t\t    CARBOCISTEINE 250mg/60ml Syrup\t\tSolmux\t\t\t\tP39.50" << endl;
-        //Robitussin Brand
-    cout << "   6\t\t\t    GUIAFENESIN 100mg/60ml Syrup\t\tRobitussin\t\t\tP26.75" << endl;
-        //Benadryl Exp Brand
-    cout << "   7\t\t\t    GUIAFENESIN 100mg/60ml Syrup\t\tBenadryl Exp\t\t\tP26.75" << endl;
-        //Transpulmin-G
-    cout << "   8\t\t\t    GUIAFENESIN 100mg/60ml Syrup\t\tTranspulmin-G\t\t\tP26.75" << endl;
-        //Neozep
-    cout << "   9\t\t\t    PHENYL+PARA+CPM Tab (COLDZEP)\t\tNeozep\t\t\t\tP3.00" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-    }
-    {//FOR FEVER & BODY PAIN
-    cout << "\t\t\t\tFOR FEVER AND BODY PAIN" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-
-    cout << "  10\t\t\t    MEFENAMIC ACID 250mg Cap \t\t\tDolfenal\t\t\tP1.50" << endl;
-    cout << "  11\t\t\t    MEFENAMIC ACID 500mg Cap \t\t\tDolfenal\t\t\tP2.00" << endl;
-    cout << "  12\t\t\t    PARACETAMOL 250mg/60ml Syrup \t\tBiogesic\t\t\tP30.00" << endl;
-    cout << "  13\t\t\t    PARACETAMOL 500mg Tab \t\t\tBiogesic\t\t\tP0.75" << endl;
-    cout << "  14\t\t\t    PARACETAMOL+IBUP Cap (ENERLAX)\t\tAlaxan FR\t\t\tP2.75" << endl;
-
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-    }
-    {//FOR ASTHMA
-    cout << "\t\t\t\tFOR ASTHMA" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-
-    cout << "  15\t\t\t    SALBUTAMOL 2mg\60ml Syrup \t\t\tVentolin\t\t\tP28.00" << endl;
-    cout << "  16\t\t\t    SALBUTAMOL 2mg Tab \t\t\t\tVentolin\t\t\tP0.75" << endl;
-    cout << "  17\t\t\t    SALBUTAMOL Nebules \t\t\t\tVentolin\t\t\tP8.50" << endl;
-
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-
-    }
-    {//FOR STOMACH PAIN
-    cout << "\t\t\t\tFOR STOMACH PAIN" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-
-    cout << "  18\t\t\t    BISACODYL 5mg Tab (For Constipation)\tDulcolax\t\t\tP2.00" << endl;
-    cout << "  19\t\t\t    LOPERAMIDE 2mg Cap (For Diarrhea)\t\tImodium\t\t\t\tP1.75" << endl;
-    cout << "  20\t\t\t    LOPERAMIDE 2mg Cap (For Diarrhea)\t\tDiatabs\t\t\t\tP1.75" << endl;
-    cout << "  21\t\t\t    DOMPERIDOME 10mg Tab (For Indigestion)\tMotilium\t\t\tP5.00" << endl;
-    cout << "  22\t\t\t    HYOSCINE 10mg Tab (For Stomachache)\t\tBuscopan\t\t\tP5.00" << endl;
-
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-    }
-    {//Vitamins
-    cout << "\t\t\t\tVITAMINS" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-
-    cout << "  23\t\t\t    ASCORBIC 120ml Syrup (Lemon-Cee)\t\tCeelin\t\t\t\tP47.00" << endl;
-    cout << "  24\t\t\t    ASCORBIC 500mg Tab (Lemon-Cee)\t\tPotencee\t\t\tP1.50" << endl;
-    cout << "  25\t\t\t    MULITIVITAMINS 120ml Syrup\t\t\tEnervon Syrup\t\t\tP60.00" << endl;
-    cout << "  26\t\t\t    MULTIVITAMINS + IRON Cap\t\t\tStresstab\t\t\tP2.25" << endl;
-    cout << "  27\t\t\t    MULTIVITAMINS + MINERALS Cap\t\tClusivol\t\t\tP4.00" << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
-    }
-
-}
 void pharm_methods::addMed(){
 
     system("CLS");
@@ -164,11 +88,10 @@ void pharm_methods::addMed(){
 
         }
 }
-void pharm_methods::take_order(int orderID){
+void pharm_methods::take_order(){
 
     system("CLS");
 
-    listofAddedDrugs();
 
     int numofOrders;
 
@@ -176,44 +99,59 @@ void pharm_methods::take_order(int orderID){
     cout << "(Maximum of 10 orders only" << endl;
     cin >> numofOrders;
 
-    cin.clear();
-    fflush(stdin);
+                    cout << "Please input your address here: ";
+                    getline(cin, addressOfcostumer);
 
-    if (numofOrders > 10){
+                    cout << "Please enter your contact number: ";
+                    getline(cin, contactOfcostumer);
 
-        cout << "You've reached the limit" << endl;
-        system("pause");
+                    cout << "Please enter your age: ";
+                    cin >> ageOfcostumer;
 
-    }
-    else{
+                    cout << "\nHow many would you like to order: " << endl;
+                    cout << "(Maximum of 10 orders only)" << endl;
+                    cin >> numofOrders;
 
-     for (int x = 0; x < numofOrders; x++)
-     {
+                cin.clear();
+                fflush(stdin);
 
-        cout << "Please input your order" << endl;
+            if (numofOrders > 10){
 
-            cout << "Name of Product: ";
-            getline(cin, nameOfmed);
+                cout << "You've reached the limit" << endl;
+                system("pause");
 
-            cout << "Generic Name: ";
-            getline(cin, genericName);
+            }
+            else{
 
-            cout << "Price: ";
-            cin >> priceOfmed;
+             for (int x = 0; x < numofOrders; x++)
+             {
 
-            cout<<" "<<endl;
+                listofAddedDrugs();
 
-            cin.clear();
-            fflush(stdin);
+                cout << "\nPlease input your order" << endl;
+
+                    cout << "Name of Product: ";
+                    getline(cin, nameOfmed);
+
+                    cout << "Generic Name: ";
+                    getline(cin, genericName);
+
+                    cout << "Price: ";
+                    cin >> priceOfmed;
+
+                    cout<<" "<<endl;
+
+                    cin.clear();
+                    fflush(stdin);
 
 
-                NameMed[x] = nameOfmed;
-                GenName[x] = genericName;
-                Price[x] = priceOfmed;
+                        NameMed[x] = nameOfmed;
+                        GenName[x] = genericName;
+                        Price[x] = priceOfmed;
 
 
-    }
-    }// end else
+            }
+            }// end else
 
 }
 void pharm_methods::modify(int orderID){
@@ -245,18 +183,21 @@ void pharm_methods::modify(int orderID){
 
         cout << endl;
 }
-void pharm_methods::list_of_orders(int orderID){
+void pharm_methods::list_of_orders(){
 
     system("CLS");
     cout << "\t\t\t\t---------- LIST OF ORDERS ----------" << endl <<endl;
 
     int ctr = 0;
-    cout << "PRODUCT NO.\tPRODUCT NAME|mg/ml\tGENERIC NAME\tPRICE" << endl;
+    cout << "PRODUCT NO.\t\tPRODUCT NAME|mg/ml\t\tGENERIC NAME\t\tPRICE" << endl;
      for(int x = 0; x < medMax; x++){
         if (NameMed[x] != "\0")
         {
             ctr++;
-            cout << "Order ID " << ctr + 0 << ":         " << NameMed[x] << "                   " << GenName[x] << "               " << Price[x] << endl;
+            cout << "Order ID " << ctr + 0;
+            cout << ":\t\t" << NameMed[x];
+            cout << "\t\t\t" << GenName[x];
+            cout << "\t\t\t" << Price[x] << endl;
         }
     }
     if (ctr == 0)
@@ -265,23 +206,120 @@ void pharm_methods::list_of_orders(int orderID){
     }
 
 }
+
+void pharm_methods::list_of_orders_forReceipt(){
+
+    int ctr = 0;
+
+     for(int x = 0; x < medMax; x++){
+        if (NameMed[x] != "\0")
+        {
+            ctr++;
+            cout << "\n\t\t************************************" << endl;
+            cout << "\t\tOrder ID " << ctr + 0 << endl;
+            cout << "\t\tProduct Name: " <<  GenName[x]<< "(" << NameMed[x] << ")" << endl;
+            cout << "\t\tPhp. " <<Price[x] << " \tx1"<< endl;
+            cout << "\t\t************************************" << endl;
+
+        }
+    }
+    if (ctr == 0)
+    {
+        cout << "\t\tNo Orders yet" << endl;
+    }
+
+
+}
+
 void pharm_methods::total_purchase(int orderID){
 
-    list_of_orders(orderID);
+    list_of_orders();
 
-    float total;
-    float vat;
+    //for time
+    time_t timetoday;
+    time (&timetoday);
 
-    total = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9];
-    vat = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] + Price[8] + Price[9] /0.12;
+    //variables for operators used
+    char recieptAsk;
+    double TOTAL;
+    double VAT = 0.12;
+    double VAT_exempt = 0.00;
+    double ZERO_rated_sales = 0.00;
+    double vatable;
 
-    cout << "The total is: " << total << endl;
-    cout << "total with vat: " << vat << endl;
+        //operation
+        vatable = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] +Price[8] + Price[9];
+        TOTAL = vatable * VAT + vatable;
+        VAT = TOTAL * VAT;
+
+    cout << "\nTHE TOTAL AMOUNT PURHCASED: " << TOTAL << endl;
+
+    a:
+    cout << "\nWould you like to print a reciept? [Y/N] ";
+    cin >> recieptAsk;
+
+
+        if (recieptAsk == 'Y' || recieptAsk == 'y') {
+
+                system("CLS");
+
+                cout << "\t\tPLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
+                cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
+                cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
+
+                list_of_orders_forReceipt();
+
+                cout << "\n\t\t*************************************************" << endl;
+                cout << "\t\tVATABLE: " << "\t\t\t" << "P" << vatable <<endl;
+                cout << "\t\tVALUE ADDED TAX (12%): " << "\t\t" << "P" << VAT <<endl;
+                cout << "\t\tVAT Exempt Sales: " << "\t\t" << "P" << VAT_exempt <<endl;
+                cout << "\t\tZero Rated Sales: " << "\t\t" << "P" << ZERO_rated_sales <<endl;
+                cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<TOTAL <<endl;
+                cout << "\t\t*************************************************" << endl;
+
+                cout << "\n\t\tBUYER'S DETAIL" <<endl;
+                cout << "\t\tCOSTUMER NAME: " << nameOfcostumer << endl;
+                cout << "\t\tCONTACT NO: " << contactOfcostumer << endl;
+                cout << "\t\tADDRESS: " << addressOfcostumer << endl;
+                cout << "\t\tAGE: " << ageOfcostumer << endl;
+
+                cout << "\n\t\tThis serves as your Sales Invoice" << endl;
+                cout << "\t\tPurchase No: 0000" << rand() << endl;
+                cout << "\n\t\t\THIS INVOICE/RECEIPT SHALL BE \n\t\tVALID FOR FIVE(5) YEARS FROM \n\t\tTHE DATE OF PERMIT TO USE" <<endl;
+
+                cout << endl;
+
+
+        } else  if (recieptAsk == 'N' || recieptAsk == 'n'){
+
+                cout << "\n\t\tSUMMARY OF PURCHASE" << endl;
+
+                list_of_orders_forReceipt();
+
+                cout << "\n\t\t*************************************************" << endl;
+                cout << "\t\tVATABLE: " << "\t\t\t" << "P" << vatable <<endl;
+                cout << "\t\tVALUE ADDED TAX (12%): " << "\t\t" << "P" << VAT <<endl;
+                cout << "\t\tVAT Exempt Sales: " << "\t\t" << "P" << VAT_exempt <<endl;
+                cout << "\t\tZero Rated Sales: " << "\t\t" << "P" << ZERO_rated_sales <<endl;
+                cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<TOTAL <<endl;
+                cout << "\t\t*************************************************" << endl;
+
+                cout << "\n\t\tBUYER'S DETAIL" <<endl;
+                cout << "\t\tCOSTUMER NAME: " << nameOfcostumer << endl;
+                cout << "\t\tCONTACT NO: " << contactOfcostumer << endl;
+                cout << "\t\tADDRESS: " << addressOfcostumer << endl;
+                cout << "\t\tAGE: " << ageOfcostumer << endl;
+
+        } else {
+
+            cout << "\nY/N input only.";
+            goto a;
+
+        }
+
 
     system("pause");
 }
-
-
 
 void pharm_methods::e_prescription(){
 

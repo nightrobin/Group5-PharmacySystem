@@ -16,11 +16,11 @@ class pharm_methods
         pharm_attributes med[medMax];
 
         void listofAddedDrugs();
-        void listofDrugs();
         void addMed();
-        void take_order(int orderID);
+        void take_order();
         void modify(int orderID);
-        void list_of_orders(int orderID);
+        void list_of_orders();
+        void list_of_orders_forReceipt();
         void total_purchase(int orderID);
         void e_prescription();
         void exit();

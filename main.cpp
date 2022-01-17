@@ -48,7 +48,7 @@ int main()
 
                     break; }
             case 2: {
-                            pharmX.take_order(orderID);
+                            pharmX.take_order();
 
                     break; }
 
@@ -69,7 +69,7 @@ int main()
                     break; }
 
             case 5: {
-                            pharmX.list_of_orders(orderID);
+                            pharmX.list_of_orders();
                             //list ng inorder
                             system("PAUSE");
 
