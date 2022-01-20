@@ -23,6 +23,7 @@ class pharm_methods
         void list_of_orders_forReceipt();
         void total_purchase(int orderID);
         void e_prescription();
+        void listofDrugs();
         void exit();
 
     protected:
