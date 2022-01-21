@@ -20,6 +20,7 @@ pharm_methods::~pharm_methods()
     string addressOfcostumer;
 
     int rand();
+    int user_input;
     string genericName;
     string nameOfmed;
     string x;
@@ -33,7 +34,7 @@ pharm_methods::~pharm_methods()
 
     system("CLS");
 
-    cout << "\t\t\t\t---------- GUIDE OF LISTING MEDICINE ----------" << endl <<endl;
+    cout << "\t\t\t\t---------- LIST OF MEDICINES ----------" << endl <<endl;
 
     cout << "**************************************************************************************************************" << endl;
     cout << "PRODUCT NO.\t\t\tPRODUCT NAME|mg/ml\t\t\tGENERIC NAME\t\t\tPRICE" << endl;
@@ -116,7 +117,7 @@ void pharm_methods::listofAddedDrugs() {
     system("cls");
     cout << "LIST OF ADDED DRUGS" << endl;
 
-    for(int i = 0; i < medMax; i++){
+    for(int i = 0; i < user_input; i++){
         if (med[i].isPurchase){
 
             cout << endl << "-----------------------------------------------" << endl;
@@ -136,33 +137,31 @@ void pharm_methods::addMed(){
 
     system("CLS");
 
-        int user_input;
         string genericName;
         string nameOfmed;
         string typeOfmed;
         float priceOfmed;
 
+        cout << "How many medicines would you like to add in the list? \nNOTE: [MIN OF 5, MAX OF 20]: ";
+        cin >> user_input;
 
-            system("CLS");
+            if (user_input > 20) {
 
-            cout << "How many medicines would you like to add in the list? \nNOTE: [MIN OF 5, MAX OF 20]: ";
-            cin >> user_input;
+                cout << "\nYou've reached the maximum limit for how many would you like to add in med list." << endl;
+                cout << endl;
 
-                if (user_input > 20) {
+            } else if (user_input < 5) {
 
-                    cout << "\nYou've reached the maximum limit for how many would you like to add in med list." << endl;
+                 cout << "\nYou inputted below minimum, please try again." << endl;
+                 cout << endl;
 
-                } else if (user_input < 5) {
+            } else {
 
-                    cout << "\nYou inputted below minimum, please try again." << endl;
+                 listofDrugs();
 
-                } else {
+                 cout << "Please input the following details" << endl;
 
-                    listofDrugs();
-
-                    cout << "Please input the following details" << endl;
-
-                    for (int i = 0; i < user_input; i++) {
+                        for (int i = 0; i < user_input; i++) {
 
                         cout << endl << "-------------------------------------------------" << endl;
                         cout << "DRUG KEY NO. " << i  + 1;
@@ -187,11 +186,8 @@ void pharm_methods::addMed(){
                         cin.clear();
                         fflush(stdin);
 
-                        } //end of for loop
-
-                        } // end of else statement
-
-
+                        } //end of for-loop
+                    } //end of else
 
 }
 void pharm_methods::take_order(){
