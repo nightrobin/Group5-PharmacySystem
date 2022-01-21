@@ -33,7 +33,7 @@ pharm_methods::~pharm_methods()
 
     system("CLS");
 
-    cout << "\t\t\t\t---------- LIST OF MEDICINES ----------" << endl <<endl;
+    cout << "\t\t\t\t---------- GUIDE OF LISTING MEDICINE ----------" << endl <<endl;
 
     cout << "**************************************************************************************************************" << endl;
     cout << "PRODUCT NO.\t\t\tPRODUCT NAME|mg/ml\t\t\tGENERIC NAME\t\t\tPRICE" << endl;
@@ -136,40 +136,63 @@ void pharm_methods::addMed(){
 
     system("CLS");
 
+        int user_input;
         string genericName;
         string nameOfmed;
         string typeOfmed;
         float priceOfmed;
 
-        cout << "Please input the following details" << endl;
 
-        for (int i = 0; i < medMax; i++) {
+            system("CLS");
+
+            cout << "How many medicines would you like to add in the list? \nNOTE: [MIN OF 5, MAX OF 20]: ";
+            cin >> user_input;
+
+                if (user_input > 20) {
+
+                    cout << "\nYou've reached the maximum limit for how many would you like to add in med list." << endl;
+
+                } else if (user_input < 5) {
+
+                    cout << "\nYou inputted below minimum, please try again." << endl;
+
+                } else {
+
+                    listofDrugs();
+
+                    cout << "Please input the following details" << endl;
+
+                    for (int i = 0; i < user_input; i++) {
+
+                        cout << endl << "-------------------------------------------------" << endl;
+                        cout << "DRUG KEY NO. " << i  + 1;
+                        cout << endl << "-------------------------------------------------" << endl;
+                        cout << "Please enter the name of Medicine/Drug: ";
+                        getline(cin, nameOfmed);
+
+                        cout << "Please enter the generic name of Medicine/Drug: ";
+                        getline(cin, genericName);
+
+                        cout << "Please specify the variety of drug (tablet/capsule/syrup): ";
+                        getline(cin, typeOfmed);
+
+                        cout << "Enter price of Medicine/Drug: ";
+                        cin >> priceOfmed;
+
+                        med[i].nameOfmed = nameOfmed;
+                        med[i].genericName = genericName;
+                        med[i].priceOfmed = priceOfmed;
+                        med[i].typeOfmed = typeOfmed;
+
+                        cin.clear();
+                        fflush(stdin);
+
+                        } //end of for loop
+
+                        } // end of else statement
 
 
-        cout << endl << "-------------------------------------------------" << endl;
-        cout << "DRUG KEY NO. " << i  + 1;
-        cout << endl << "-------------------------------------------------" << endl;
-        cout << "Please enter the name of Medicine/Drug: ";
-        getline(cin, nameOfmed);
 
-        cout << "Please enter the generic name of Medicine/Drug: ";
-        getline(cin, genericName);
-
-        cout << "Please specify the variety of drug (tablet/capsule/syrup): ";
-        getline(cin, typeOfmed);
-
-        cout << "Enter price of Medicine/Drug: ";
-        cin >> priceOfmed;
-
-        med[i].nameOfmed = nameOfmed;
-        med[i].genericName = genericName;
-        med[i].priceOfmed = priceOfmed;
-        med[i].typeOfmed = typeOfmed;
-
-        cin.clear();
-        fflush(stdin);
-
-        }
 }
 void pharm_methods::take_order(){
 

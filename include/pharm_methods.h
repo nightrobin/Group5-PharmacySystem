@@ -12,7 +12,7 @@ class pharm_methods
         pharm_methods();
         virtual ~pharm_methods();
 
-        static const int medMax = 10;
+        static const int medMax = 20;
         pharm_attributes med[medMax];
 
         void listofAddedDrugs();
