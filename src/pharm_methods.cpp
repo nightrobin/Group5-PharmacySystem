@@ -24,9 +24,11 @@ pharm_methods::~pharm_methods()
     int user_input;
     string genericName;
     string nameOfmed;
+    string typeOfmed;
     string x;
     string GenName[maxrow] = {};
     string NameMed[maxrow] = {};
+    string TypeMed[maxrow] = {};
     double Price[maxrow] = {};
     double priceOfmed;
     bool isPurchase;
@@ -191,7 +193,7 @@ void pharm_methods::listofAddedDrugs() {
                 cout << "Name of Drugs    #" << i + 1 << ": " << med[i].nameOfmed << endl;
                 cout << "Generic Name     #" << i + 1 << ": " << med[i].genericName << endl;
                 cout << "Variant of Drug  #" << i + 1 << ": " << med[i].typeOfmed << endl;
-                cout << "Price of Drugs   #" << i + 1 << ": " << med[i].priceOfmed << endl;
+                cout << "Price of Drug    #" << i + 1 << ": " << med[i].priceOfmed << endl;
                 cout << "-----------------------------------------------" << endl;
 
             }// end if
@@ -202,6 +204,7 @@ void pharm_methods::listofAddedDrugs() {
 void pharm_methods::take_order(){
 
     system("CLS");
+
 
         int numofOrders;
 
@@ -229,26 +232,32 @@ void pharm_methods::take_order(){
             if (numofOrders > 10){
 
                 cout << "You've reached the limit" << endl;
+
                 system("pause");
 
                     } else{
 
+                      listofAddedDrugs();
+
                         for (int x = 0; x < numofOrders; x++){
 
-                            listofAddedDrugs();
 
-                            cout << "\nPlease input your order" << endl;
+                                cout << "\nPlease input your order" << endl;
 
-                            cout << "Name of Product: ";
-                            getline(cin, nameOfmed);
+                                cout << "Name of Drugs: ";
+                                getline(cin, nameOfmed);
 
-                            cout << "Generic Name: ";
-                            getline(cin, genericName);
+                                cout << "Generic Name: ";
+                                getline(cin, genericName);
 
-                            cout << "Price: ";
-                            cin >> priceOfmed;
+                                cout << "Variant of Drugs: ";
+                                //getline(cin, typeOfmed);
+                                getline(cin, typeOfmed);
 
-                            cout<<" "<<endl;
+                                cout << "Price: ";
+                                cin >> priceOfmed;
+
+                                cout<<" "<<endl;
 
                         cin.clear();
                         fflush(stdin);
@@ -257,6 +266,9 @@ void pharm_methods::take_order(){
                             NameMed[x] = nameOfmed;
                             GenName[x] = genericName;
                             Price[x] = priceOfmed;
+                            TypeMed[x] = typeOfmed;
+
+
 
                         }//end for loop
                     }// end else
@@ -301,7 +313,7 @@ void pharm_methods::list_of_orders(){
 
     int ctr = 0;
 
-        cout << "PRODUCT NO.\t\tPRODUCT NAME|mg/ml\t\tGENERIC NAME\t\tPRICE" << endl;
+        cout << "PRODUCT NO.\t\tPRODUCT NAME|mg/ml\t\tGENERIC NAME\t\tVARIANT OF DRUG\t\tPRICE" << endl;
 
         for(int x = 0; x < medMax; x++){
 
@@ -311,8 +323,11 @@ void pharm_methods::list_of_orders(){
 
                 cout << "Order ID " << ctr + 0;
                 cout << ":\t\t" << NameMed[x];
-                cout << "\t\t\t" << GenName[x];
+                cout << "\t\t\t\t" << GenName[x];
+                cout << "\t\t\t" << TypeMed[x];
                 cout << "\t\t\t" << Price[x] << endl;
+
+
             }
         } // end for loop
 
@@ -405,7 +420,7 @@ void pharm_methods::total_purchase(int orderID){
                     cout << "\t\tAGE: " << ageOfcostumer << endl;
 
                     cout << "\n\t\tThis serves as your Sales Invoice" << endl;
-                    cout << "\t\tPurchase No: 0000" << rand() << endl;
+                    cout << "\t\tPurchase No: 0000" << rand() << endl; // rand: generate random number
                     cout << "\n\t\tTHIS INVOICE/RECEIPT SHALL BE \n\t\tVALID FOR FIVE(5) YEARS FROM \n\t\tTHE DATE OF PERMIT TO USE" <<endl;
 
                     cout << endl;
