@@ -22,7 +22,7 @@ int main()
     cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
 
     cout << "\t\t-----------------------------------------" << endl;
-    cout << "\t\t|[1] - ADD 10 MEDICINE \t\t\t|" << endl;
+    cout << "\t\t|[1] - ADD MEDICINE/DRUGS IN A LIST\t|" << endl;
     cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
     cout << "\t\t|[3] - LIST OF ADDED DRUGS \t\t|" << endl;
     cout << "\t\t|[4] - MODIFY LIST OF ADDED DRUG \t|" << endl;
@@ -97,7 +97,7 @@ int main()
 
                     break; }
 
-    } //end switch
+            } //end switch
     }
 
    }

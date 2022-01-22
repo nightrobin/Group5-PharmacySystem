@@ -1,7 +1,7 @@
 #include "pharm_methods.h"
 #include <ctime>
 #include <cstdlib>
-#include <algorithm>
+#include <algorithm> //for rand() variable
 
 pharm_methods::pharm_methods()
 {
@@ -134,6 +134,8 @@ void pharm_methods::listofAddedDrugs() {
                 cout << "Price of Drugs   #" << i + 1 << ": " << med[i].priceOfmed << endl;
                 cout << "-----------------------------------------------" << endl;
             }// END IF CONDITION
+
+
         }// END FOR LOOP
 
 }
@@ -206,6 +208,9 @@ void pharm_methods::take_order(){
 
         int numofOrders;
 
+                /*COMMENT: transform(using the algorithm include) transforms the current string variables to selected attributes
+                whereas in this case "toupper" means to capitalize each letter in the string */
+
                 cout << "Please enter your name: ";
                 getline(cin, nameOfcostumer);
                 transform(nameOfcostumer.begin(), nameOfcostumer.end(), nameOfcostumer.begin(), ::toupper);
@@ -273,7 +278,7 @@ void pharm_methods::modify(int orderID){
 
     orderID--;
 
-        if (orderID <= 0){
+        if (orderID < 0){
 
             orderID = 0;
 
@@ -307,7 +312,7 @@ void pharm_methods::list_of_orders(){
 
     system("CLS");
 
-        cout << "\t\t\t\t---------- LIST OF ORDERS ----------" << endl <<endl;
+    cout << "\t\t\t\t---------- LIST OF ORDERS ----------" << endl <<endl;
 
     int ctr = 0;
 
