@@ -9,7 +9,6 @@ int main()
 {
     pharm_methods pharmX;
 
-
     time_t timetoday;
     time (&timetoday);
 
@@ -44,12 +43,13 @@ int main()
 
             case 1: {
                         pharmX.addMed();
+
                         system("PAUSE");
 
                     break; }
+
             case 2: {
                         pharmX.take_order();
-
 
                     break; }
 
@@ -57,29 +57,32 @@ int main()
                         pharmX.listofAddedDrugs();
                         system("PAUSE");
 
+
                     break; }
 
             case 4: {
                         system("CLS");
+
                         cout << "\nPlease enter Medical/Drug ID you want to modify: ";
                         cin >> orderID;
+
                         cin.clear();
                         fflush(stdin);
+
                         pharmX.modify(orderID);
 
                     break; }
 
             case 5: {
                         pharmX.list_of_orders();
-                        //list ng inorder
+
                         system("PAUSE");
 
                     break; }
 
             case 6: {
                         pharmX.total_purchase(orderID);
-                        //nameofmed
-                        //price * quantity
+
                         system("CLS");
 
                     break; }
@@ -91,8 +94,8 @@ int main()
 
             case 0: {
                         pharmX.exit();
-                        break;
-                    }
+
+                    break; }
 
     } //end switch
     }
