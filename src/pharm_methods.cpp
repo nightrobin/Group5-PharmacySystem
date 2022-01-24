@@ -32,7 +32,7 @@ pharm_methods::~pharm_methods()
     double priceOfmed;
     bool isPurchase;
 
-    void pharm_methods::listofDrugs(){
+void pharm_methods::listofDrugs(){
 
     system("CLS");
 
@@ -211,66 +211,76 @@ void pharm_methods::take_order(){
                 /*COMMENT: transform(using the algorithm include) transforms the current string variables to selected attributes
                 whereas in this case "toupper" means to capitalize each letter in the string */
 
-                cout << "Please enter your name: ";
-                getline(cin, nameOfcostumer);
-                transform(nameOfcostumer.begin(), nameOfcostumer.end(), nameOfcostumer.begin(), ::toupper);
+        if (user_input == 0){
 
-                cout << "Please input your address here: ";
-                getline(cin, addressOfcostumer);
-                transform(addressOfcostumer.begin(), addressOfcostumer.end(), addressOfcostumer.begin(), ::toupper);
+                cout << "There are no medicines added" << endl;
 
-                cout << "Please enter your contact number: ";
-                getline(cin, contactOfcostumer);
+                cout << "To go back ";
+                system("pause");
 
-                cout << "Please enter your age: ";
-                cin >> ageOfcostumer;
+            }else{
 
-                cout << "\nHow many would you like to order: " << endl;
-                cout << "(Maximum of 10 orders only)" << endl;
-                cin >> numofOrders;
+                    cout << "Please enter your name: ";
+                    getline(cin, nameOfcostumer);
+                    transform(nameOfcostumer.begin(), nameOfcostumer.end(), nameOfcostumer.begin(), ::toupper);
 
-                cin.clear();
-                fflush(stdin);
+                    cout << "Please input your address here: ";
+                    getline(cin, addressOfcostumer);
+                    transform(addressOfcostumer.begin(), addressOfcostumer.end(), addressOfcostumer.begin(), ::toupper);
 
-                    if (numofOrders > 10){
+                    cout << "Please enter your contact number: ";
+                    getline(cin, contactOfcostumer);
 
-                            cout << "You've reached the limit" << endl;
+                    cout << "Please enter your age: ";
+                    cin >> ageOfcostumer;
 
-                        system("pause");
+                    cout << "\nHow many would you like to order: " << endl;
+                    cout << "(Maximum of 10 orders only)" << endl;
+                    cin >> numofOrders;
 
-                        } else{
+                    cin.clear();
+                    fflush(stdin);
 
-                            listofAddedDrugs();
+                        if (numofOrders > 10){
 
-                            for (int x = 0; x < numofOrders; x++){
+                                cout << "You've reached the limit" << endl;
 
-                                cout << "\nPlease input your order" << endl;
+                            system("pause");
 
-                                cout << "Name of Drugs: ";
-                                getline(cin, nameOfmed);
+                            } else{
 
-                                cout << "Generic Name: ";
-                                getline(cin, genericName);
+                                listofAddedDrugs();
 
-                                cout << "Variant of Drugs: ";
-                                getline(cin, typeOfmed);
+                                for (int x = 0; x < numofOrders; x++){
 
-                                cout << "Price: ";
-                                cin >> priceOfmed;
+                                    cout << "\nPlease input your order" << endl;
 
-                                cout<<" "<<endl;
+                                    cout << "Name of Drugs: ";
+                                    getline(cin, nameOfmed);
 
-                        cin.clear();
-                        fflush(stdin);
+                                    cout << "Generic Name: ";
+                                    getline(cin, genericName);
 
-                                NameMed[x] = nameOfmed;
-                                GenName[x] = genericName;
-                                Price[x] = priceOfmed;
-                                TypeMed[x] = typeOfmed;
+                                    cout << "Variant of Drugs: ";
+                                    getline(cin, typeOfmed);
+
+                                    cout << "Price: ";
+                                    cin >> priceOfmed;
+
+                                    cout<<" "<<endl;
+
+                            cin.clear();
+                            fflush(stdin);
+
+                                    NameMed[x] = nameOfmed;
+                                    GenName[x] = genericName;
+                                    Price[x] = priceOfmed;
+                                    TypeMed[x] = typeOfmed;
 
 
-            }// FOR LOOP
-            }// END ELSE CONDITION
+                    }// FOR LOOP
+                }// END ELSE CONDITION
+            }//END OF ELSE
 
 }
 
