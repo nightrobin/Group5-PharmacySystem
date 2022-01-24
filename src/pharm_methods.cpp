@@ -24,7 +24,7 @@ pharm_methods::~pharm_methods()
     string genericName;
     string nameOfmed;
     string typeOfmed;
-    string x;
+
     string GenName[maxrow] = {};
     string NameMed[maxrow] = {};
     string TypeMed[maxrow] = {};
@@ -213,9 +213,9 @@ void pharm_methods::take_order(){
 
         if (user_input == 0){
 
-                cout << "There are no medicines added" << endl;
+                cout << "There are no medicines currently added." << endl;
 
-                cout << "To go back ";
+                cout << "To go back. ";
                 system("pause");
 
             }else{
