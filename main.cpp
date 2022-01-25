@@ -23,8 +23,8 @@ int main()
 
     cout << "\t\t-----------------------------------------" << endl;
     cout << "\t\t|[1] - ADD MEDICINE/DRUGS IN A LIST\t|" << endl;
-    cout << "\t\t|[2] - TAKE ORDER \t\t\t|" << endl;
-    cout << "\t\t|[3] - LIST OF ADDED DRUGS \t\t|" << endl;
+    cout << "\t\t|[2] - LIST OF ADDED DRUGS \t\t|" << endl;
+    cout << "\t\t|[3] - TAKE ORDER \t\t\t|" << endl;
     cout << "\t\t|[4] - MODIFY LIST OF ADDED DRUG \t|" << endl;
     cout << "\t\t|[5] - LIST OF ORDERS \t\t\t|" << endl;
     cout << "\t\t|[6] - TOTAL PURCHASE \t\t\t|" << endl;
@@ -49,13 +49,16 @@ int main()
                     break; }
 
             case 2: {
-                        pharmX.take_order();
+                        pharmX.listofAddedDrugs();
+
+                        system("PAUSE");
 
                     break; }
 
             case 3: {
-                        pharmX.listofAddedDrugs();
-                        system("PAUSE");
+
+
+                        pharmX.take_order();
 
 
                     break; }

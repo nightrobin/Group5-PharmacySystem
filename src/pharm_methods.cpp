@@ -115,31 +115,6 @@ void pharm_methods::listofDrugs(){
 
 }
 
-void pharm_methods::listofAddedDrugs() {
-
-    system("cls");
-
-        cout << "LIST OF ADDED DRUGS" << endl;
-
-        for(int i = 0; i < user_input; i++){
-
-            if (med[i].isPurchase){
-
-                cout << endl << "-----------------------------------------------" << endl;
-                cout << "DRUG KEY NO. " << i  + 1;
-                cout << endl << "-----------------------------------------------" << endl;
-                cout << "Name of Drugs    #" << i + 1 << ": " << med[i].nameOfmed << endl;
-                cout << "Generic Name     #" << i + 1 << ": " << med[i].genericName << endl;
-                cout << "Variant of Drug  #" << i + 1 << ": " << med[i].typeOfmed << endl;
-                cout << "Price of Drugs   #" << i + 1 << ": " << med[i].priceOfmed << endl;
-                cout << "-----------------------------------------------" << endl;
-            }// END IF CONDITION
-
-
-        }// END FOR LOOP
-
-}
-
 void pharm_methods::addMed(){
 
     system("CLS");
@@ -201,6 +176,31 @@ void pharm_methods::addMed(){
 
 }
 
+void pharm_methods::listofAddedDrugs() {
+
+    system("cls");
+
+        cout << "LIST OF ADDED DRUGS" << endl;
+
+        for(int i = 0; i < user_input; i++){
+
+            if (med[i].isPurchase){
+
+                cout << endl << "-----------------------------------------------" << endl;
+                cout << "DRUG KEY NO. " << i  + 1;
+                cout << endl << "-----------------------------------------------" << endl;
+                cout << "Name of Drugs    #" << i + 1 << ": " << med[i].nameOfmed << endl;
+                cout << "Generic Name     #" << i + 1 << ": " << med[i].genericName << endl;
+                cout << "Variant of Drug  #" << i + 1 << ": " << med[i].typeOfmed << endl;
+                cout << "Price of Drugs   #" << i + 1 << ": " << med[i].priceOfmed << endl;
+                cout << "-----------------------------------------------" << endl;
+            }// END IF CONDITION
+
+
+        }// END FOR LOOP
+
+}
+
 void pharm_methods::take_order(){
 
     system("CLS");
@@ -253,7 +253,9 @@ void pharm_methods::take_order(){
 
                                 for (int x = 0; x < numofOrders; x++){
 
+                                    cout << "--------------------------";
                                     cout << "\nPlease input your order" << endl;
+                                    cout << "--------------------------";
 
                                     cout << "Name of Drugs: ";
                                     getline(cin, nameOfmed);
@@ -280,7 +282,7 @@ void pharm_methods::take_order(){
 
                     }// FOR LOOP
                 }// END ELSE CONDITION
-            }//END OF ELSE
+           }//END OF ELSE
 
 }
 
