@@ -173,7 +173,6 @@ void pharm_methods::addMed(){
 
                                 } //end of for-loop
                             } //end of else
-
 }
 
 void pharm_methods::listofAddedDrugs() {
@@ -255,7 +254,7 @@ void pharm_methods::take_order(){
 
                                     cout << "--------------------------";
                                     cout << "\nPlease input your order" << endl;
-                                    cout << "--------------------------";
+                                    cout << "--------------------------" <<endl;
 
                                     cout << "Name of Drugs: ";
                                     getline(cin, nameOfmed);
@@ -377,7 +376,7 @@ void pharm_methods::list_of_orders_forReceipt(){
 
 }
 
-void pharm_methods::total_purchase(int orderID){
+void pharm_methods::total_purchase(){
 
     list_of_orders();
 
@@ -392,13 +391,17 @@ void pharm_methods::total_purchase(int orderID){
     double VAT_exempt = 0.00;
     double ZERO_rated_sales = 0.00;
     double vatable;
+    double discount = 0.20;
 
         //operation
         vatable = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] +Price[8] + Price[9];
         TOTAL = vatable * VAT + vatable;
         VAT = TOTAL * VAT;
 
+
+
         cout << "\nTHE TOTAL AMOUNT PURHCASED: " << TOTAL << endl;
+
 
         //RECEIPT
         if (TOTAL != 0){

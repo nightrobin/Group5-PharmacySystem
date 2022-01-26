@@ -43,7 +43,6 @@ int main()
 
             case 1: {
                         pharmX.addMed();
-
                         system("PAUSE");
 
                     break; }
@@ -84,7 +83,7 @@ int main()
                     break; }
 
             case 6: {
-                        pharmX.total_purchase(orderID);
+                        pharmX.total_purchase();
 
                         system("CLS");
 
