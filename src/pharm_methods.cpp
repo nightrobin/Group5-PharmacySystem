@@ -376,45 +376,56 @@ void pharm_methods::list_of_orders_forReceipt(){
 
 }
 
+//void pharm_methods::discountPS(){
+//}
+
 void pharm_methods::total_purchase(){
 
     list_of_orders();
 
-    //for time
-    time_t timetoday;
-    time (&timetoday);
+        //for time
+        time_t timetoday;
+        time (&timetoday);
 
-    //variables for operators used
-    char recieptAsk;
-    double TOTAL;
-    double VAT = 0.12;
-    double VAT_exempt = 0.00;
-    double ZERO_rated_sales = 0.00;
-    double vatable;
-    double discount = 0.20;
-
-        //operation
-        vatable = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] +Price[8] + Price[9];
-        TOTAL = vatable * VAT + vatable;
-        VAT = TOTAL * VAT;
-
-
-
-        cout << "\nTHE TOTAL AMOUNT PURHCASED: " << TOTAL << endl;
+        //variables for operators used
+        char recieptAsk;
+        char discountAsk;
+        double TOTAL;
+        double VAT = 0.12;
+        double VAT_exempt = 0.00;
+        double ZERO_rated_sales = 0.00;
+        double vatable;
+        double discount = 0.2;
+        double disc;
+        double total_discount;
+        double allTotal;
+        int PWDnumber;
 
 
-        //RECEIPT
-        if (TOTAL != 0){
+            TOTAL = Price[0] + Price[1] + Price[2] + Price[3] + Price[4] + Price[5] + Price[6] + Price[7] +Price[8] + Price[9] + Price[10];
 
-                a: // GO TO
+            cout << "\nTHE TOTAL AMOUNT PURHCASED: " << TOTAL << endl;
 
-                cout << "\nWould you like to print a reciept? [Y/N] ";
-                cin >> recieptAsk;
+                //operation
+
+                allTotal = TOTAL * VAT;
+                disc = allTotal * discount;
+                total_discount = TOTAL - disc;
 
 
-            if (recieptAsk == 'Y' || recieptAsk == 'y') {
+                //RECEIPT
+                if (TOTAL != 0){
 
-                system("CLS");
+                    cout << "DO YOU HAVE PWD ID / SENIOR ID (YOU NEED THE ID NUMBER): [Y/N] ";
+                    cin >> discountAsk;
+
+
+                    if (discountAsk == 'Y' || discountAsk == 'y'){
+
+                        cout << "\nPWD NUMBER: ";
+                        cin >> PWDnumber;
+
+                    system("cls");
 
                     cout << "\t\tPLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
                     cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
@@ -423,14 +434,15 @@ void pharm_methods::total_purchase(){
                 list_of_orders_forReceipt();
 
                     cout << "\n\t\t*************************************************" << endl;
-                    cout << "\t\tVATABLE: " << "\t\t\t" << "P" << vatable <<endl;
+                    cout << "\t\tTOTAL: " << "\t\t" << "P" << TOTAL <<endl;
+                    cout << "\t\tVATABLE: " << "\t\t\t" << "P" << TOTAL <<endl;
                     cout << "\t\tVALUE ADDED TAX (12%): " << "\t\t" << "P" << VAT <<endl;
-                    cout << "\t\tVAT Exempt Sales: " << "\t\t" << "P" << VAT_exempt <<endl;
-                    cout << "\t\tZero Rated Sales: " << "\t\t" << "P" << ZERO_rated_sales <<endl;
-                    cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<TOTAL <<endl;
+                    cout << "\t\tYOUR DISCOUNT: " << "\t\t\t" << "P" << disc << endl;
+                    cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" << total_discount <<endl;
                     cout << "\t\t*************************************************" << endl;
 
                     cout << "\n\t\tBUYER'S DETAIL" <<endl;
+                    cout << "\t\tPWD ID NO.: " << PWDnumber << endl;
                     cout << "\t\tCOSTUMER NAME: " << nameOfcostumer << endl;
                     cout << "\t\tCONTACT NO: " << contactOfcostumer << endl;
                     cout << "\t\tADDRESS: " << addressOfcostumer << endl;
@@ -440,34 +452,80 @@ void pharm_methods::total_purchase(){
                     cout << "\t\tPurchase No: 0000" << rand() << endl; // rand: generate random number
                     cout << "\n\t\tTHIS INVOICE/RECEIPT SHALL BE \n\t\tVALID FOR FIVE(5) YEARS FROM \n\t\tTHE DATE OF PERMIT TO USE" <<endl;
 
-                    cout << endl;
 
-                } else if  (recieptAsk == 'N' || recieptAsk == 'n'){
+                }else {
 
-                        cout << "\n\t\tSUMMARY OF PURCHASE" << endl;
+
+                    vatable = TOTAL * VAT + TOTAL;
+                    VAT = TOTAL * VAT;
+
+                    //VAT RECEIPT
+                    a: // GO TO
+
+                    cout << "\nWould you like to print a reciept? [Y/N] ";
+                    cin >> recieptAsk;
+
+
+                if (recieptAsk == 'Y' || recieptAsk == 'y') {
+
+                    system("CLS");
+
+                        cout << "\t\tPLM - PHARMACY NG LUNGSOD NG MAYNILA" << endl;
+                        cout << "\t\tLocated at Gen Luna St., Cor Muralla St., Intramuros, Manila" << endl;
+                        cout << "\t\tCURRENT DATE & TIME: " << asctime(localtime(&timetoday)) << endl;
 
                     list_of_orders_forReceipt();
 
                         cout << "\n\t\t*************************************************" << endl;
-                        cout << "\t\tVATABLE: " << "\t\t\t" << "P" << vatable <<endl;
+                        cout << "\t\tVATABLE: " << "\t\t\t" << "P" << TOTAL <<endl;
                         cout << "\t\tVALUE ADDED TAX (12%): " << "\t\t" << "P" << VAT <<endl;
                         cout << "\t\tVAT Exempt Sales: " << "\t\t" << "P" << VAT_exempt <<endl;
                         cout << "\t\tZero Rated Sales: " << "\t\t" << "P" << ZERO_rated_sales <<endl;
-                        cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<TOTAL <<endl;
+                        cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<vatable <<endl;
                         cout << "\t\t*************************************************" << endl;
 
                         cout << "\n\t\tBUYER'S DETAIL" <<endl;
-                        cout << "\t\tCostumer Name: \t\t" << nameOfcostumer << endl;
-                        cout << "\t\tContact No: \t\t" << contactOfcostumer << endl;
-                        cout << "\t\tAddress: \t\t" << addressOfcostumer << endl;
-                        cout << "\t\tAge: \t\t" << ageOfcostumer << endl;
+                        cout << "\t\tCOSTUMER NAME: " << nameOfcostumer << endl;
+                        cout << "\t\tCONTACT NO: " << contactOfcostumer << endl;
+                        cout << "\t\tADDRESS: " << addressOfcostumer << endl;
+                        cout << "\t\tAGE: " << ageOfcostumer << endl;
 
-                } else {
+                        cout << "\n\t\tThis serves as your Sales Invoice" << endl;
+                        cout << "\t\tPurchase No: 0000" << rand() << endl; // rand: generate random number
+                        cout << "\n\t\tTHIS INVOICE/RECEIPT SHALL BE \n\t\tVALID FOR FIVE(5) YEARS FROM \n\t\tTHE DATE OF PERMIT TO USE" <<endl;
 
-                        cout << "\nY/N input only.";
-                    goto a;
-                }// END ELSE
-        }// END IF CONDITION
+                        cout << endl;
+
+                    } else if  (recieptAsk == 'N' || recieptAsk == 'n'){
+
+                        system("cls");
+
+                            cout << "\n\t\tSUMMARY OF PURCHASE" << endl;
+
+                        list_of_orders_forReceipt();
+
+                            cout << "\n\t\t*************************************************" << endl;
+                            cout << "\t\tVATABLE: " << "\t\t\t" << "P" << vatable <<endl;
+                            cout << "\t\tVALUE ADDED TAX (12%): " << "\t\t" << "P" << VAT <<endl;
+                            cout << "\t\tVAT Exempt Sales: " << "\t\t" << "P" << VAT_exempt <<endl;
+                            cout << "\t\tZero Rated Sales: " << "\t\t" << "P" << ZERO_rated_sales <<endl;
+                            cout << "\t\tTOTAL PURCHASE: " << "\t\t" << "P" <<TOTAL <<endl;
+                            cout << "\t\t*************************************************" << endl;
+
+                            cout << "\n\t\tBUYER'S DETAIL" <<endl;
+                            cout << "\t\tCostumer Name: \t\t" << nameOfcostumer << endl;
+                            cout << "\t\tContact No: \t\t" << contactOfcostumer << endl;
+                            cout << "\t\tAddress: \t\t" << addressOfcostumer << endl;
+                            cout << "\t\tAge: \t\t" << ageOfcostumer << endl;
+                            cout << endl;
+
+                        } else {
+
+                            cout << "\nY/N input only.";
+                        goto a;
+                        }// END ELSE
+                    }// END ELSE CONDITION
+                }
 
     system("pause");
 }
