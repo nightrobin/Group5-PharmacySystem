@@ -20,11 +20,12 @@ class pharm_methods
         void take_order();
         void modify(int orderID);
         void list_of_orders();
-        void list_of_orders_forReceipt();
         void total_purchase();
         void e_prescription();
-        void listofDrugs();
         void exit();
+
+        void list_of_orders_forReceipt();
+        void listofDrugs();
 
     protected:
 

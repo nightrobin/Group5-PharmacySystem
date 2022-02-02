@@ -20,7 +20,7 @@ class pharm_attributes
     bool isPurchase = true;
 
     //discounts and tax
-    double discountID = 0.05;
+    double discountID = 0.2;
     double VAT = 0.12;
 
     //for infos of costumer:
